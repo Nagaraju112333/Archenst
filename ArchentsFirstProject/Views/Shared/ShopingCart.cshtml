@@ -1,0 +1,42 @@
+﻿
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       *{
+           margin:0;
+           padding:0;
+       }
+       ul li {
+           list-style-type:none;
+       }
+       ul li p{
+           color:red;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            @if (Session["CardCounter"] == null)
+            {
+@*                @Html.ActionLink(linkText: "Card(" + Session["CardCounter"] + ")", actionName: "shopingCartDetails", routeValues: "Products", htmlAttributes: new { id = "Carditgem" })
+*@            <a href="/Products/shopingCartDetails" id="Carditgem">
+                <i class="bi bi-bag-plus-fill"></i><p style="color:red;">@Session["CardCounter"]</p>
+            </a>
+            }
+            else
+            {
+@*                @Html.ActionLink(linkText: "Card(" + Session["CardCounter"] + ")", actionName: "shopingCartDetails", routeValues: "Products", htmlAttributes: new { id = "Carditgem" })
+*@
+            <a href="/Products/shopingCartDetails" id="Carditgem">
+                <i class="bi bi-bag-plus-fill"></i>(@Session["CardCounter"])
+
+            </a>
+            }
+        </li>
+    </ul>
+</body>
+</html>

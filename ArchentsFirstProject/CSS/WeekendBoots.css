@@ -1,0 +1,123 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homeAndCreateLink {
+    margin-left: 5px;
+    margin-bottom: 50px;
+}
+
+.Main {
+    display: flex;
+}
+
+.LeftBoot {
+    width: 800px;
+}
+
+.RightBoot {
+    width: 700px;
+}
+
+.size-radio-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #383838;
+    border-radius: 50px;
+    margin: 10px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #383838;
+    cursor: pointer;
+}
+
+@*.size-radio-btn.check {
+    background-color: #383838;
+    color: #fff;
+}
+
+*@
+.size-radio-btn.check {
+    background: #383838;
+    color: #fff;
+}
+
+.wrapper {
+    height: 40px;
+    @* max-width:150px;
+    *@ width:150px;
+    background: #FFF;
+    @* border-radius:12px;
+    *@ display:flex;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    @* margin-top:30px;
+    *@
+}
+
+    .wrapper span {
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .wrapper span.num {
+            font-size: 20px;
+            border-right: 3px solid rgba(0,0,0,0.2);
+            border-left: 3px solid rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+
+.payment {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reviews {
+    margin-left: 30px;
+}
+
+.images {
+    background: no-repeat
+}
+
+.row img {
+    width: 300px;
+    height: 340px;
+}
+
+.imagess img {
+    width: 340px;
+    height: 350px;
+}
+
+.small-image-group {
+    display: flex;
+    @* justify-content:space-between;
+    *@
+}
+
+.small-image-col {
+    flex-basis: 30%;
+}
+
+#Mainimg {
+    text-align: center;
+}
+
+.small-image-col {
+    display: flex;
+}
+
+.reviewsDetaisl p {
+    font-size: small;
+}
+

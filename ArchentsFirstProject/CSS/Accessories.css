@@ -1,0 +1,40 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 850px;
+}
+
+.centered {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+    .centered p {
+        font - size: 10em;
+        color: white;
+        margin-top: 230px;
+        margin-left: 200px;
+    }
+
+    .centered h3 {
+        color: white;
+        margin-left: 250px;
+    }
+
+.Accesseriess1 img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.prices {
+    margin-left:50px;
+}

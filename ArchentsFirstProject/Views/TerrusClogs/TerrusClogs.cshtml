@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "TerrusClogs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="~/CSS/Terrus.css" />
+ 
+</head>
+<body>
+    <div class="headerimage">
+        <div>
+            <img src="~/Content/TerrusImages/firstImage.jpg" />
+            <div>
+                <div class="centered">
+                    <p>The Terrus</p>
+                    <h5>Made with 99% natural and recycled matirials.</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <img src="~/Content/TerrusImages/secondimage.jpg" />
+        </div>
+    </div>
+    <div class="Accesseriess" style="margin-left: 20px;display:flex; justify-content: space-between">
+        @foreach (var a in ViewBag.Data)
+        {
+            <div class="Accesseriess1">
+                <a href="/Products/WeeknedBoots?id=@a.Product_Id" id="home">
+                    <img id='menuImg111' src="~/Content/WeekendBootimages/@a.Image1" alt="logo"
+                         onmouseover="onHover(); " onmouseout="offHover();" />
+                </a>
+                <div class="prices">
+                    <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h6>@a.Product_Name</h6>
+                    <p>RS: @a.Price</p>
+                    <input type="submit" value="AddTocard" style="border-radius:20px;margin-bottom:10px;background-color:#123026; color:#FFFFFF;width:150px;height:40px;" itemid="@a.Product_Id" onclick="Addtocard(this)">
+                </div>
+                <br />
+            </div>
+
+        }
+    </div>
+</body>
+</html>

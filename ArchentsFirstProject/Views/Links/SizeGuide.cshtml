@@ -1,0 +1,504 @@
+﻿
+@{
+    ViewBag.Title = "SizeGuide";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Size Guides</title>
+    <style>
+        .form-width {
+            width: 70%;
+            padding-left: 25rem;
+        }
+
+            .form-width h2 {
+                color: #123026;
+            }
+
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+            .active, .collapsible:hover {
+                background-color: white;
+            }
+
+            .collapsible:after {
+                content: '\002B';
+                color: black;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <img src="~/Content/LinksImages/Footer2.png" width="100%" />
+    <div class="form-width">
+        <h2>The Weekend Boot Size Guide</h2>
+        <button class="collapsible">Size Guide</button>
+        <div class="content">
+            <p>We always recommend measuring your foot length to ensure you find your best fit. To best find the length of your foot,<u> measure a straight line from the tip of your big toe to end of your heel.</u></p>
+
+
+            <table style="width: 406px; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr style="height: 48px;">
+                        <td style="width: 59px; text-align: center; height: 48px;"><span style="color: #000000;"><strong>EU</strong></span></td>
+                        <td style="width: 62px; text-align: center; height: 48px;"><span style="color: #000000;"><b>Length (cm)</b></span></td>
+                        <td style="width: 73px; text-align: center; height: 48px;"><span style="color: #000000;"><strong>Width (cm)</strong></span></td>
+                        <td style="width: 42px; text-align: center; height: 48px;"><span style="color: #000000;"><b>USA<br>(Women's)</b></span></td>
+                        <td style="width: 125.878px; text-align: center; height: 48px;"><span style="color: #000000;"><b>USA<br>(Men's)</b></span></td>
+                        <td style="width: 10px; text-align: center; height: 48px;">
+                            <p><span style="color: #000000;"><b><br>UK<br><br></b></span></p>
+                        </td>
+                    </tr>
+                    <tr style="text-align: center; height: 23px;">
+                        <td style="width: 59px; height: 23px;"><span style="color: #000000;">36</span></td>
+                        <td style="width: 62px; height: 23px;">
+                            <div></div>
+                            <span style="color: #000000;"> 23.38 </span>
+                        </td>
+                        <td style="width: 73px; height: 23px;">
+                            <div></div>
+                            <span style="color: #000000;"> 7.7 </span>
+                        </td>
+                        <td style="width: 42px; height: 23px;"><span style="color: #000000;">6</span></td>
+                        <td style="width: 125.878px; height: 23px;"><span style="color: #000000;"></span></td>
+                        <td style="width: 10px; height: 23px;"><span style="color: #000000;">3</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">37</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 24.04 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 7.9 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">6.5</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;"></span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">4</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">38</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 24.71 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 8.1 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">7.5</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;"></span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">5</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">39</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 25.37 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 8.3 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">8.5</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">6.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">6</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">40</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 26.04 </span>
+                            <div></div>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 8.5 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">9.5</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">7.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">7</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">41</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 26.71 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 8.7 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">10</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">8.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">8</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">42</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 27.37 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div></div>
+                            <span style="color: #000000;"> 8.9 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">10.5</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">9</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">9</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">43</span></td>
+                        <td style="width: 62px; height: 24px;"><span style="color: #000000;">28.03</span></td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #000000;">9.2</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">11</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">10</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">9.5</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">44</span></td>
+                        <td style="width: 62px; height: 24px;"><span style="color: #000000;">28.70</span></td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #000000;">9.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #000000;">12</span></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">10.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">10</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">45</span></td>
+                        <td style="width: 62px; height: 24px;"><span style="color: #000000;">29.36</span></td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #000000;">9.8</span></td>
+                        <td style="width: 42px; height: 24px;"></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">11.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">11</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #000000;">46</span></td>
+                        <td style="width: 62px; height: 24px;"><span style="color: #000000;">30.02</span></td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #000000;">10.1</span></td>
+                        <td style="width: 42px; height: 24px;"></td>
+                        <td style="width: 125.878px; height: 24px;"><span style="color: #000000;">12.5</span></td>
+                        <td style="width: 10px; height: 24px;"><span style="color: #000000;">12</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+        <button class="collapsible">Fit Tips</button>
+        <div class="content">
+            <p>→ Our Weekend Boots are made for all foot widths narrow to wide.</p>
+            <p>→ They run true to size.</p>
+            <p>→ If you are in between sizes, size up.</p>
+            <p>→ Make sure you try them on with a thicker sock and that your toes aren’t hitting the front of the boot when you walk.</p>
+            <p>→ If you still need a little more wiggle room, you can replace our thick removable insole with a thinner option to get a bit more space.</p>
+            <p>→ They may take about 3-5 wears before giving way to the unique shape of your foot. To avoid blisters, make sure you break them in before you heading out on a longer, or more intense walk.</p>
+        </div>
+
+        <button class="collapsible">Fit Testimonals</button>
+        <div class="content">
+            <h4>Olivia - Normal Width, Winter Wear</h4>
+            <p>"I've got a normal width foot, and usually take a 7 US. The size 38s fit me perfectly with a thick sock."</p>
+            <h4>Mila - Wide Width, Day Hiker</h4>
+            <p>"I've got a wider sized foot, and I found that the laces really helped provide the perfect fit. I'm generally an 8 US and the 39s fit me well with a bit room for the ups and downs of a light day hike."</p>
+            <h4>Stella - Narrow Width, City Wear</h4>
+            <p>"My feet are quite narrow, and I'm always a 7.5 US in my boots. I got the size 38s and they fit perfectly. I wear them around town, grocery shopping, and walking my dog."</p>
+        </div>
+
+
+        <h2>The Terrus Size Guide</h2>
+        <button class="collapsible">Size Guide</button>
+        <div class="content">
+            <p>We always recommend measuring your foot length to ensure you find your best fit. To best find the length of your foot,<u> measure a straight line from the tip of your big toe to end of your heel.</u></p>
+
+
+            <table style="width: 385px; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr style="height: 48px;">
+                        <td style="width: 59px; text-align: center; height: 48px;"><span style="color: #123026;"><strong>EU</strong></span></td>
+                        <td style="width: 62px; text-align: center; height: 48px;"><span style="color: #123026;"><b>Length (cm)</b></span></td>
+                        <td style="width: 73px; text-align: center; height: 48px;"><span style="color: #123026;"><strong>Width (cm)</strong></span></td>
+                        <td style="width: 42px; text-align: center; height: 48px;"><span style="color: #123026;"><b>US</b></span></td>
+                        <td style="width: 42px; text-align: center; height: 48px;"><span style="color: #123026;"><b>UK</b></span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 23px;">
+                        <td style="width: 59px; height: 23px;"><span style="color: #123026;">36</span></td>
+                        <td style="width: 62px; height: 23px;">
+                            <div></div>
+                            <span style="color: #123026;"> 23.6 </span>
+                        </td>
+                        <td style="width: 73px; height: 23px;"><span style="color: #123026;">9.4</span></td>
+                        <td style="width: 42px; height: 23px;"><span style="color: #123026;">6</span></td>
+                        <td style="width: 42px; height: 23px;"><span style="color: #123026;">3</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">37</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 24.2 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">9.6</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">6.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">4</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">38</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 24.8 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">9.8</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">7.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">5</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">39</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 25.4 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">10.0</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">8.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">6</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">40</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 26.0 </span>
+                            <div></div>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">10.2</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">9.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">7</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">41</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 26.6 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">10.4</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">10</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">8</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">42</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div></div>
+                            <span style="color: #123026;"> 27.2 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span mce-data-marked="1" style="color: #123026;">10.6</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">10.5</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">9</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <button class="collapsible">Fit Tips</button>
+        <div class="content">
+            <p>→  True to size (with room for woolly socks on cool days).</p>
+            <p>→  Perfect fit for wider feet! The Terrus is made with loads of room for your toes to get the much-needed space they deserve.</p>
+            <p>→  Use the adjustable straps to make sure your foot feels safe and secure while walking on inclines or rocky terrain.</p>
+            <p>→ The Terrus is comfy right out of the box. For longer or more intense walks, its best to get a few wears in to make sure you are comfy along the way.</p>
+        </div>
+
+        <button class="collapsible">Fit Testimonals</button>
+        <div class="content">
+            <h4>Becca - Normal Width, City Wear</h4>
+            <p>"I have a normal width foot, and I'm a 9.5. I went with the 40s and they fit perfectly with a thick sock."</p>
+            <h4>Alanna - Wide Width, Commuter</h4>
+            <p>"I was nervous about getting these because I do have a wider foot. I am usually an 8.5, and the size 39s were perfect, with lots of room for my toes."</p>
+            <h4>Patricia - Narrow Width, Gardener </h4>
+            <p>"My feet are naturally quite narrow, I'm a 6.5, and the Terrus in 36 fit perfectly."</p>
+        </div>
+
+
+        <h2>The Rain Boot Size Guide</h2>
+        <button class="collapsible">Size Guide</button>
+        <div class="content">
+            <p>We always recommend measuring your foot length to ensure you find your best fit. To best find the length of your foot,<u> measure a straight line from the tip of your big toe to end of your heel.</u></p>
+
+
+            <table style="width: 385px; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr style="height: 48px;">
+                        <td style="width: 59px; text-align: center; height: 48px;"><span style="color: #123026;"><strong>EU</strong></span></td>
+                        <td style="width: 62px; text-align: center; height: 48px;"><span style="color: #123026;"><b>Length (cm)</b></span></td>
+                        <td style="width: 73px; text-align: center; height: 48px;"><span style="color: #123026;"><strong>Width (cm)</strong></span></td>
+                        <td style="width: 42px; text-align: center; height: 48px;"><span style="color: #123026;"><b>US</b></span></td>
+                        <td style="width: 42px; text-align: center; height: 48px;"><span style="color: #123026;"><b>UK</b></span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 23px;">
+                        <td style="width: 59px; height: 23px;"><span style="color: #123026;">37</span></td>
+                        <td style="width: 62px; height: 23px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 23.6 </span>
+                        </td>
+                        <td style="width: 73px; height: 23px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 7.8 </span>
+                        </td>
+                        <td style="width: 42px; height: 23px;"><span style="color: #123026;">6</span></td>
+                        <td style="width: 42px; height: 23px;"><span style="color: #123026;">4</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">38</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 23.8 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 8.1 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">7</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">5</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">39</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 24.6 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 8.3 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">8</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">6</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">40/41</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 25.4 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 8.6 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">9</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">7</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">42</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 26.4 </span>
+                            <div><meta charset="utf-8"></div>
+                        </td>
+                        <td style="width: 73px; height: 24px;"><span style="color: #123026;">8.8</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">10</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">8</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">43</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 27.6 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 9.1 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">11</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">9</span></td>
+                    </tr>
+                    <tr style="text-align: center; height: 24px;">
+                        <td style="width: 59px; height: 24px;"><span style="color: #123026;">44</span></td>
+                        <td style="width: 62px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 28.4 </span>
+                        </td>
+                        <td style="width: 73px; height: 24px;">
+                            <div><meta charset="utf-8"></div>
+                            <span style="color: #123026;"> 9.3 </span>
+                        </td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">12</span></td>
+                        <td style="width: 42px; height: 24px;"><span style="color: #123026;">10</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <button class="collapsible">Fit Tips</button>
+        <div class="content">
+            <p>→ Our Rain Boots generally run narrow, so we do recommend to size up.</p>
+            <p>→ If you wear wide shoes or have high arches, these boots may not be for you.</p>
+        </div>
+
+        <button class="collapsible">Fit Testimonals</button>
+        <div class="content">
+            <h4>Sarah - Normal Width, City Wear</h4>
+            <p>"I have a normal width foot, and I'm usually between a 6.5-7. I went with the 37s and they fit perfectly with a thin sock. With my thicker socks on colder days, I just remove the insole for some extra room."</p>
+            <h4>Alanna - Wide Width, Commuter</h4>
+            <p>"I was nervous about getting these because I do have a wider foot. I am usually an 8.5, and the size 39s were perfect, with lots of room for my toes."</p>
+            <h4>Patricia - Narrow Width, Gardener </h4>
+            <p>"My feet are naturally quite narrow, so I stuck to my normal size (39). They fit like a glove, and I love them for when I'm gardening."</p>
+        </div>
+    </div>
+
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+}
+    </script>
+</body>
+</html>

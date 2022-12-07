@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "ShippingInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shipping Information</title>
+    <style>
+        .form-width {
+            width: 70%;
+            padding-left: 25rem;
+        }
+
+            .form-width h2 {
+                color: #123026;
+            }
+
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+            .active, .collapsible:hover {
+                background-color: white;
+            }
+
+            .collapsible:after {
+                content: '\002B';
+                color: black;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <img src="~/Content/LinksImages/Footer3.png" width="100%" />
+    <div class="form-width">
+
+        <h2>Shipping Information by Country:</h2>
+        <button class="collapsible">United States</button>
+        <div class="content">
+            <p>Shipping is free on orders over $100. On orders under $100, there is a small Green Shipping Fee of $15.</p>
+            <p>Customs and duties are included in the price so you don’t ever have to worry about surprise fees upon arrival.</p>
+            <p>We carbon offset all our shipping.</p>
+        </div>
+        <button class="collapsible">Canada</button>
+        <div class="content">
+            <p>Shipping is free on orders over $100. On orders under $100, there is a small Green Shipping Fee of $15.</p>
+            <p>Customs and duties are included in the price so you don’t ever have to worry about surprise fees upon arrival.</p>
+            <p>We carbon offset all our shipping.</p>
+        </div>
+        <button class="collapsible">Other Countries</button>
+        <div class="content">
+            <p>We also ship to the following countries: Guernsey, Hong Kong SAR, Jersey, New Zealand, Norway, Singapore, Switzerland, Australia, Andorra, Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Monaco, Netherlands, Poland, Portugal, Romania, San Marino, Slovakia, Slovenia, Spain, Sweden, United Kingdom.</p>
+            <p>We charge a flat rate of $40 USD for all shipments to the above noted regions. You are responsible for all duties and taxes for import.</p>
+            <p>We carbon offset all our shipping.</p>
+        </div>
+
+        <h2>Frequently Asked Questions:</h2>
+        <button class="collapsible">How do I know if my order has shipped?</button>
+        <div class="content">
+            <p>You’ll receive an email confirmation along with your tracking number. Check your spam folder just in case, as sometimes they may end up there!</p>
+        </div>
+        <button class="collapsible">Can I make changes to my shipping address?</button>
+        <div class="content">
+            <p>Once your order has been placed, we are unable to make any changes to the shipping address.</p>
+        </div>
+        <button class="collapsible">Can you ship to P.O. boxes?</button>
+        <div class="content">
+            <p>Unfortunately, we are unable to deliver packages to P.O. boxes at this time.</p>
+        </div>
+        <button class="collapsible">What happens if my package is lost or stolen?</button>
+        <div class="content">
+            <p>If your package has been lost or stolen please contact support@thesusoutdoors.com immediately.</p>
+        </div>
+        <button class="collapsible">Can I cancel my order once it's been placed?</button>
+        <div class="content">
+            <p>We are committed to shipping orders quickly, so, unfortunately, we cannot cancel orders once they've been placed. Once the package arrives, you can of course coordinate a return with us.</p>
+        </div>
+
+    </div>
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+}
+    </script>
+</body>
+</html>
+

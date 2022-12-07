@@ -1,0 +1,249 @@
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\ArchentsFirstProject.dll.config
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\ArchentsFirstProject.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\ArchentsFirstProject.pdb
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csc.exe
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csc.exe.config
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csc.rsp
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csi.exe
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csi.exe.config
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\csi.rsp
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.AppContext.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Console.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Net.Http.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\vbc.exe
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\vbc.exe.config
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\vbc.rsp
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Antlr3.Runtime.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Newtonsoft.Json.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Helpers.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Mvc.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Optimization.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Razor.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\WebGrease.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Helpers.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Mvc.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Optimization.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.Razor.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Newtonsoft.Json.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Antlr3.Runtime.pdb
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.AssemblyReference.cache
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CoreCompileInputs.cache
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CopyComplete
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.pdb
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\EntityFramework.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\EntityFramework.xml
+C:\Users\Archents\source\repos\ArchentsFirstProject\ArchentsFirstProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\ArchentsFirstProject.dll.config
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\ArchentsFirstProject.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\ArchentsFirstProject.pdb
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csc.exe
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csc.exe.config
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csc.rsp
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csi.exe
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csi.exe.config
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\csi.rsp
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.AppContext.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Console.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Net.Http.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\vbc.exe
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\vbc.exe.config
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\vbc.rsp
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Antlr3.Runtime.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\EntityFramework.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Newtonsoft.Json.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Helpers.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Mvc.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Optimization.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Razor.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\WebGrease.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\EntityFramework.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Helpers.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Mvc.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Optimization.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.Razor.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Newtonsoft.Json.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Antlr3.Runtime.pdb
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.AssemblyReference.cache
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CoreCompileInputs.cache
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CopyComplete
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.dll
+C:\Users\Archents\Desktop\Git Clone\EcommarceWebSitee\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.pdb
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.AssemblyReference.cache
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CoreCompileInputs.cache
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.pdb
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\ArchentsFirstProject.dll.config
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\ArchentsFirstProject.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\ArchentsFirstProject.pdb
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csc.exe
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csc.exe.config
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csc.rsp
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csi.exe
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csi.exe.config
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\csi.rsp
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.AppContext.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Console.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Net.Http.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\vbc.exe
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\vbc.exe.config
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\vbc.rsp
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Antlr3.Runtime.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\EntityFramework.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Newtonsoft.Json.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Helpers.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Mvc.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Optimization.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Razor.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\WebGrease.dll
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\EntityFramework.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Helpers.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Mvc.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Optimization.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.Razor.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Newtonsoft.Json.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Antlr3.Runtime.pdb
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Archents\Downloads\EcommarceWebSitee-ecommarce\ArchentsFirstProject\obj\Debug\ArchentsFirstProject.csproj.CopyComplete
