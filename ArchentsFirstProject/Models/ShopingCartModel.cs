@@ -24,6 +24,7 @@ namespace ArchentsFirstProject.Models
         public Nullable<int> TotalPrice { get; set; }
         public int CartId { get; set; }
         public Nullable<int> UserId { get; set; }
+        public Nullable<System.DateTime> ProductDataTime { get; set; }
     
         public virtual Products1 Products1 { get; set; }
         public virtual Register Register { get; set; }

@@ -4,30 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="75ba124711b143858f243a79732107e8" Name="Diagram1">
-        <EntityTypeShape EntityType="ArchentsModel.Category" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Country" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Order_Details" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Order_tbl" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Product" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Products1" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Register" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.Review" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.ShopingCartModel" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.size" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.State" Width="1.5" PointX="10" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ArchentsModel.OrderDetail" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="40f0c111c89947e493f040b2278cda52" Name="Diagram1">
+        <EntityTypeShape EntityType="ArchentsModel.Category" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.Country" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.OrderDetail" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.Products1" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.Register" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.Review" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.Role" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.ShopingCartModel" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.size" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.State" Width="1.5" PointX="8" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchentsModel.User_Shiping_Address" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
         <AssociationConnector Association="ArchentsModel.FK__Products1__Categ__72C60C4A" ManuallyRouted="false" />
-        <AssociationConnector Association="ArchentsModel.FK_Products_Category" ManuallyRouted="false" />
         <AssociationConnector Association="ArchentsModel.FK__State__CountryId__07C12930" ManuallyRouted="false" />
-        <AssociationConnector Association="ArchentsModel.FK_Order_Details_Order_tbl" ManuallyRouted="false" />
-        <AssociationConnector Association="ArchentsModel.FK_Order_Details_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="ArchentsModel.FK_Order_tbl_Register" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchentsModel.FK__OrderDeta__Addre__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchentsModel.FK__OrderDeta__Produ__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchentsModel.FK__OrderDeta__useri__245D67DE" ManuallyRouted="false" />
         <AssociationConnector Association="ArchentsModel.FK__ShopingCa__ItemI__1BC821DD" ManuallyRouted="false" />
         <AssociationConnector Association="ArchentsModel.FK__size__ProductId__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchentsModel.FK__Register__Roleid__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchentsModel.FK__User_Ship__UserI__2180FB33" ManuallyRouted="false" />
         <AssociationConnector Association="ArchentsModel.FK_ShopingCartModel_Register" ManuallyRouted="false" />
-        <AssociationConnector Association="ArchentsModel.FK_OrderDetails_OrderDetails" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

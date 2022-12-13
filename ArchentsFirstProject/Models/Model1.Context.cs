@@ -13,10 +13,10 @@ namespace ArchentsFirstProject.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArchentsEntities6 : DbContext
+    public partial class ArchentsEntities5 : DbContext
     {
-        public ArchentsEntities6()
-            : base("name=ArchentsEntities6")
+        public ArchentsEntities5()
+            : base("name=ArchentsEntities5")
         {
         }
     
@@ -27,16 +27,15 @@ namespace ArchentsFirstProject.Models
     
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<Order_Details> Order_Details { get; set; }
-        public virtual DbSet<Order_tbl> Order_tbl { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Products1> Products1 { get; set; }
         public virtual DbSet<Register> Registers { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<ShopingCartModel> ShopingCartModels { get; set; }
         public virtual DbSet<size> sizes { get; set; }
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<User_Shiping_Address> User_Shiping_Address { get; set; }
     }
 }

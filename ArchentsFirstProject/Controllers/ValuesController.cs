@@ -21,7 +21,7 @@ namespace ArchentsFirstProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult values(Product pro)
+        public ActionResult values(Products1 pro)
         {
 
             return View();

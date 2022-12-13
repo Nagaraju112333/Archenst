@@ -11,11 +11,12 @@ using ArchentsFirstProject.Models;
 using System.Web.Security;
 
 namespace ArchentsFirstProject.Controllers
-{
+{ 
     public class AccountController : Controller
     {
+       
         // GET: Account
-            ArchentsEntities6 db=new ArchentsEntities6();   
+        ArchentsEntities5 db = new ArchentsEntities5();
         public ActionResult Index()
         {
             return View();
@@ -48,13 +49,14 @@ namespace ArchentsFirstProject.Controllers
                 #endregion
                 #region  Password Hashing 
                 user.Password = Crypto.Hash(user.Password);
-             //   user.ConfirmPassword = Crypto.Hash(user.ConfirmPassword); //
+                //   user.ConfirmPassword = Crypto.Hash(user.ConfirmPassword); //
                 #endregion
                 user.IsEmailVerified = false;
-
+              
                 #region Save to Database
-                using (ArchentsEntities6 dc = new ArchentsEntities6())
+                using (ArchentsEntities5 dc = new ArchentsEntities5())
                 {
+                    user.RoleType = 2;
                     dc.Registers.Add(user);
                     dc.SaveChanges();
                     //Send Email to User
@@ -77,7 +79,7 @@ namespace ArchentsFirstProject.Controllers
         [NonAction]
         public bool IsEmailExist(string emailID)
         {
-            using (ArchentsEntities6 dc = new ArchentsEntities6())
+            using (ArchentsEntities5 dc = new ArchentsEntities5())
             {
                 var v = dc.Registers.Where(a => a.Email == emailID).FirstOrDefault();
                 return v != null;
@@ -124,7 +126,7 @@ namespace ArchentsFirstProject.Controllers
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = nc;
             smtp.Send(mc);
-           
+
         }
 
         /*public void SendVerificationLinkEmail(string emailID, string activationCode)
@@ -173,8 +175,7 @@ namespace ArchentsFirstProject.Controllers
             //Send Email 
             string message = "";
             bool status = false;
-
-            using (ArchentsEntities6 dc = new ArchentsEntities6())
+            using (ArchentsEntities5 dc = new ArchentsEntities5())
             {
                 var account = dc.Registers.Where(a => a.Email == EmailID).FirstOrDefault();
                 if (account != null)
@@ -208,7 +209,7 @@ namespace ArchentsFirstProject.Controllers
                 return HttpNotFound();
             }
 
-            using (ArchentsEntities6 dc = new ArchentsEntities6())
+            using (ArchentsEntities5 dc = new ArchentsEntities5())
             {
                 var user = dc.Registers.Where(a => a.ResetpasswordCode == id).FirstOrDefault();
                 if (user != null)
@@ -230,7 +231,7 @@ namespace ArchentsFirstProject.Controllers
             var message = "";
             if (ModelState.IsValid)
             {
-                using (ArchentsEntities6 dc = new ArchentsEntities6())
+                using (ArchentsEntities5 dc = new ArchentsEntities5())
                 {
                     var user = dc.Registers.Where(a => a.ResetpasswordCode == model.ResetCode).FirstOrDefault();
                     if (user != null)
@@ -255,7 +256,7 @@ namespace ArchentsFirstProject.Controllers
         public ActionResult VerifyAccount(string id)
         {
             bool Status = false;
-            using (ArchentsEntities6 db = new ArchentsEntities6())
+            using (ArchentsEntities5 db = new ArchentsEntities5())
             {
                 db.Configuration.ValidateOnSaveEnabled = false;
                 var a = db.Registers.FirstOrDefault(c => c.ActivationCode == new Guid(id));
@@ -280,40 +281,73 @@ namespace ArchentsFirstProject.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login( UserLogin login, string ReturnUrl = "")
-        {
+        public ActionResult Login(UserLogin login, string ReturnUrl = "")
+            {
             string message = "";
-            using (ArchentsEntities6 dc = new ArchentsEntities6())
+            using (ArchentsEntities5 dc = new ArchentsEntities5())
             {
                 var v = dc.Registers.Where(a => a.Email == login.EmailID).FirstOrDefault();
                 if (v != null)
                 {
-                    if (!v.IsEmailVerified)
+                    if (v.RoleType == 2)
                     {
-                        ViewBag.Message = "Please verify your email first";
-                        return View();
-                    }
-                    if (string.Compare(Crypto.Hash(login.Password), v.Password) == 0)
-                    {
-                        int timeout = login.RememberMe ? 525600 : 20; // 525600 min = 1 year
-                        var ticket = new FormsAuthenticationTicket(login.EmailID, login.RememberMe, timeout);
-                        string encrypted = FormsAuthentication.Encrypt(ticket);
-                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
-                        cookie.Expires = DateTime.Now.AddMinutes(timeout);
-                        cookie.HttpOnly = true;
-                        Response.Cookies.Add(cookie);
-                        if (Url.IsLocalUrl(ReturnUrl))
+                        if (!v.IsEmailVerified)
                         {
-                            return Redirect(ReturnUrl);
+                            ViewBag.Message = "Please verify your email first";
+                            return View();
+                        }
+                        if (string.Compare(Crypto.Hash(login.Password), v.Password) == 0)
+                        {
+                            int timeout = login.RememberMe ? 525600 : 20; // 525600 min = 1 year
+                            var ticket = new FormsAuthenticationTicket(login.EmailID, login.RememberMe, timeout);
+                            string encrypted = FormsAuthentication.Encrypt(ticket);
+                            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
+                            cookie.Expires = DateTime.Now.AddMinutes(timeout);
+                            cookie.HttpOnly = true;
+                            Response.Cookies.Add(cookie);
+                            if (Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Home", "Home");
+                            }
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Employee");
+                            message = "Invalid credential provided";
                         }
                     }
                     else
                     {
-                        message = "Invalid credential provided";
+                        if (!v.IsEmailVerified)
+                        {
+                            ViewBag.Message = "Please verify your email first";
+                            return View();
+                        }
+                        if (string.Compare(Crypto.Hash(login.Password), v.Password) == 0)
+                        {
+                            int timeout = login.RememberMe ? 525600 : 20; // 525600 min = 1 year
+                            var ticket = new FormsAuthenticationTicket(login.EmailID, login.RememberMe, timeout);
+                            string encrypted = FormsAuthentication.Encrypt(ticket);
+                            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
+                            cookie.Expires = DateTime.Now.AddMinutes(timeout);
+                            cookie.HttpOnly = true;
+                            Response.Cookies.Add(cookie);
+                            if (Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Home", "Home");
+                            }
+                        }
+                        else
+                        {
+                            message = "Invalid credential provided";
+                        }
                     }
                 }
                 else
@@ -323,6 +357,11 @@ namespace ArchentsFirstProject.Controllers
             }
             ViewBag.Message = message;
             return View();
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login");
         }
     }
 }

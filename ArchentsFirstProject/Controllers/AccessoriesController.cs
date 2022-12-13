@@ -9,7 +9,7 @@ namespace ArchentsFirstProject.Controllers
     public class AccessoriesController : Controller
     {
         // GET: Accessories
-        private ArchentsEntities6 db=new ArchentsEntities6();
+        private ArchentsEntities5 db=new ArchentsEntities5();
         public ActionResult Index()
         {
             return View();

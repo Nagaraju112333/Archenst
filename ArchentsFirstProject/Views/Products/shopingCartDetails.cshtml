@@ -1,12 +1,17 @@
-﻿@model IEnumerable<ArchentsFirstProject.Models.ShopingCartModel>
+﻿@model  IEnumerable<ArchentsFirstProject.Models.ShopingCartModel>
 @{
     ViewBag.Title = "shopingCartDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
     decimal totalamount = 0;
 }
- 
 <html>
 <head>
+    <style>
+        #Labels  label{
+            font-size:1em;
+            font-weight:800;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -20,22 +25,38 @@
             }
         })
     </script>
- 
 </head>
 <body>
     <div class="container">
-        <h2>shopingCartDetails</h2>
-        @using (Html.BeginForm("", "", FormMethod.Post))
+        <h2 style="color:#808080">shopingCartDetails</h2>
+        @using (Html.BeginForm("ShipingAddress", "Order", FormMethod.Post))
         {
             <table class="table" id="tab">
+                <tr id="Labels">
+                    <td>
+                        <label>Image</label>
+                    </td>
+                    <td>
+                        <label style="text-align:center;">Name</label>
+                    </td>
+                    <td>
+                        <label>Quantity</label>
+                    </td>
+                    <td>
+                        <label>UnitPrice</label>
+                    </td>
+                    <td>
+                        <label>TotalPrice</label>
+                    </td>
+                </tr>
                 @foreach (var item in Model)
                 {
-                    totalamount += Convert.ToInt32( item.TotalPrice);
-                    <tr id="trrr">
+                    totalamount += Convert.ToInt32(item.TotalPrice);
+                     <tr id="trrr">
                         <td>
-                            <img src="~/Content/WeekendBootimages/@item.Imagepath" height="70px" width="70px" class="img-rounded" />
+                            <img src="~/Content/WeekendBootimages/@item.Imagepath" height="70px" width="70px" class="img-rounded" id="image" />
                         </td>
-                        <td style="text-align:center;">
+                        <td>
                             @item.ItemName
                         </td>
 
@@ -51,10 +72,11 @@
                         <td>
                             <div class="icon">
                                 @*<a href="#" id="closebtn" onclick="closebtn()"> <i class="bi bi-trash3-fill"></i></a>*@
-                                <a href="/Products/RemoveCartItem?id=@item.CartId" ><i class="bi bi-trash3-fill"></i></a>
+                                <a href="/Products/RemoveCartItem?id=@item.CartId"><i class="bi bi-trash3-fill"></i></a>
                             </div>
                         </td>
                     </tr>
+                   
                 }
                 <tr style="border-top:2px solid maroon">
                     <td colspan="4" style="text-align:right">
@@ -69,32 +91,12 @@
                 <tr style="text-align:right">
                     <td colspan="5">
                         <input type="submit" value="Checkout" class="btn btn-success" />
+
                     </td>
                 </tr>
             </table>
         }
     </div>
-    <script>
-        function Remove(item) {
-            var itemId = $(item).attr("itemid")
-            var formdata = new FormData();
-            formdata.delete("id", "itemId");
-            var a = { "id": itemId };
-
-            $.ajax({
-                dataType: 'JSON',
-                type: "Post",
-                data: a,
-                url: "/Products/RemoveCartItem",
-                success: function (data) {
-                    Session["Carditgem"].Remove(); //session list remove ?
-                },
-                error: function () {
-                    alert("there is something is Wrong....")
-                }
-            });
-        }</script>
-
 
 </body>
 </html>

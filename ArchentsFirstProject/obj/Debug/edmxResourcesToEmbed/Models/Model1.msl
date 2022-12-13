@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ArchentsModelStoreContainer" CdmEntityContainer="ArchentsEntities6">
+  <EntityContainerMapping StorageEntityContainer="ArchentsModelStoreContainer" CdmEntityContainer="ArchentsEntities5">
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="ArchentsModel.Category">
         <MappingFragment StoreEntitySet="Category">
@@ -17,48 +17,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Order_Details">
-      <EntityTypeMapping TypeName="ArchentsModel.Order_Details">
-        <MappingFragment StoreEntitySet="Order_Details">
-          <ScalarProperty Name="Order_Details_id" ColumnName="Order_Details_id" />
-          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
-          <ScalarProperty Name="product_Qty" ColumnName="product_Qty" />
-          <ScalarProperty Name="product_price" ColumnName="product_price" />
-          <ScalarProperty Name="Order_Id" ColumnName="Order_Id" />
-          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Order_tbl">
-      <EntityTypeMapping TypeName="ArchentsModel.Order_tbl">
-        <MappingFragment StoreEntitySet="Order_tbl">
-          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
-          <ScalarProperty Name="Order_No" ColumnName="Order_No" />
-          <ScalarProperty Name="Order_Date" ColumnName="Order-Date" />
-          <ScalarProperty Name="Order_Total" ColumnName="Order-Total" />
-          <ScalarProperty Name="Register_id" ColumnName="Register_id" />
-          <ScalarProperty Name="Shoping_date" ColumnName="Shoping_date" />
-          <ScalarProperty Name="Is_delivered" ColumnName="Is_delivered" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="ArchentsModel.Product">
-        <MappingFragment StoreEntitySet="Products">
-          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
-          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
-          <ScalarProperty Name="product_Description" ColumnName="product_Description" />
-          <ScalarProperty Name="Image1" ColumnName="Image1" />
-          <ScalarProperty Name="Image2" ColumnName="Image2" />
-          <ScalarProperty Name="Image3" ColumnName="Image3" />
-          <ScalarProperty Name="Image4" ColumnName="Image4" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Stock" ColumnName="Stock" />
-          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
-          <ScalarProperty Name="Image5" ColumnName="Image5" />
-          <ScalarProperty Name="Image6" ColumnName="Image6" />
-          <ScalarProperty Name="Image7" ColumnName="Image7" />
-          <ScalarProperty Name="Image8" ColumnName="Image8" />
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="ArchentsModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="orderName" ColumnName="orderName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="Productid" ColumnName="Productid" />
+          <ScalarProperty Name="Addressid" ColumnName="Addressid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -96,6 +64,8 @@
           <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
           <ScalarProperty Name="ResetpasswordCode" ColumnName="ResetpasswordCode" />
           <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+          <ScalarProperty Name="Roleid" ColumnName="Roleid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -107,6 +77,15 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Review_Tittle" ColumnName="Review_Tittle" />
           <ScalarProperty Name="Body" ColumnName="Body" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ArchentsModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -123,6 +102,7 @@
           <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
           <ScalarProperty Name="CartId" ColumnName="CartId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProductDataTime" ColumnName="ProductDataTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -156,15 +136,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="OrderDetails">
-      <EntityTypeMapping TypeName="ArchentsModel.OrderDetail">
-        <MappingFragment StoreEntitySet="OrderDetails">
-          <ScalarProperty Name="OderDetaislId" ColumnName="OderDetaislId" />
-          <ScalarProperty Name="orderid" ColumnName="orderid" />
-          <ScalarProperty Name="productid" ColumnName="productid" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
-          <ScalarProperty Name="Total" ColumnName="Total" />
+    <EntitySetMapping Name="User_Shiping_Address">
+      <EntityTypeMapping TypeName="ArchentsModel.User_Shiping_Address">
+        <MappingFragment StoreEntitySet="User_Shiping_Address">
+          <ScalarProperty Name="AdderssId" ColumnName="AdderssId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Apartment" ColumnName="Apartment" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

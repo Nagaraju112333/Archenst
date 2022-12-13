@@ -14,14 +14,16 @@ namespace ArchentsFirstProject.Models
     
     public partial class OrderDetail
     {
-        public int OderDetaislId { get; set; }
-        public int orderid { get; set; }
-        public int productid { get; set; }
-        public decimal Quantity { get; set; }
-        public decimal UnitPrice { get; set; }
-        public decimal Total { get; set; }
+        public int orderId { get; set; }
+        public string orderName { get; set; }
+        public Nullable<int> Amount { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
+        public Nullable<int> userid { get; set; }
+        public Nullable<int> Productid { get; set; }
+        public Nullable<int> Addressid { get; set; }
     
-        public virtual OrderDetail OrderDetails1 { get; set; }
-        public virtual OrderDetail OrderDetail1 { get; set; }
+        public virtual User_Shiping_Address User_Shiping_Address { get; set; }
+        public virtual Products1 Products1 { get; set; }
+        public virtual Register Register { get; set; }
     }
 }

@@ -52,6 +52,9 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Razorpay.3.0.2\lib\net45\Razorpay.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -133,7 +136,9 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\RazorPayController.cs" />
     <Compile Include="Controllers\ShopingController.cs" />
     <Compile Include="Controllers\TerrusClogsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -143,6 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -164,28 +170,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\MyrolesProvider.cs" />
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetailsModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Models\Order_Details.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Order_tbl.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Products1.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Razorpay.cs" />
     <Compile Include="Models\Register.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\relationship.cs" />
     <Compile Include="Models\ResetPassword.cs" />
     <Compile Include="Models\Review.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShopingCartModel.cs">
@@ -202,6 +205,10 @@
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\User_Shiping_Address.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyRolesProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="raju.cs" />
   </ItemGroup>
@@ -397,11 +404,13 @@
     <Content Include="Views\Links\ContactUs.cshtml" />
     <Content Include="Views\Links\Hiring.cshtml" />
     <Content Include="Views\Links\Terms.cshtml" />
+    <Content Include="Views\Order\ShipingAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Card\" />
     <Folder Include="Views\Catogery\" />
+    <Folder Include="Views\RazorPay\" />
     <Folder Include="Views\Shoping\" />
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@
 //     Manual changes to this file may cause unexpected behavior in your application.
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
+
 //------------------------------------------------------------------------------
 
 namespace ArchentsFirstProject.Models
@@ -17,6 +18,7 @@ namespace ArchentsFirstProject.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Products1()
         {
+            this.OrderDetails = new HashSet<OrderDetail>();
             this.ShopingCartModels = new HashSet<ShopingCartModel>();
             this.sizes = new HashSet<size>();
         }
@@ -39,6 +41,8 @@ namespace ArchentsFirstProject.Models
         public Nullable<int> CategoryID { get; set; }
     
         public virtual Category Category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShopingCartModel> ShopingCartModels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

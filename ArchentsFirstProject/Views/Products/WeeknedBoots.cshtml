@@ -8,7 +8,7 @@
 <html onload="parent.scrollTo(0,0);">
 <head>
     <script src="~/Scripts/Product/Cart.js"></script>
-
+ 
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="Main">
-            
+
 
             <div class="LeftBoot">
                 <div>
@@ -75,17 +75,17 @@
                     <p>12 reviews</p>
                 </div>
                 <div>
-                    <h2>Size</h2>
+                    Size <h2 id="size1" for="s-size"></h2>
+
                 </div>
 
                 <div class="Sizes">
                     @foreach (var a in ViewBag.size)
                     {
-                        <input type="radio" name="size" value="@a.size1" hidden id="s-size" />
+                        <input type="radio" name="size" hidden value="@a.size1" id="s-size" onclick="myFunction(@a.size1)" />
                         <label for="s-size" class="size-radio-btn">@a.size1</label>
                     }
-
-                    @*  <input type="radio" name="size" value="37" hidden id="m-size" />
+                     @* <input type="radio" name="size" value="37" hidden id="m-size" />
                         <label for="m-size" class="size-radio-btn">37</label>
                         <input type="radio" name="size" value="38" hidden id="m-size" />
                         <label for="m-size" class="size-radio-btn">38</label>
@@ -100,14 +100,11 @@
                 </div>
                 <div style="display:flex; margin-top:30px;">
                     <div class="wrapper">
-
                         <span class="minus">-</span>
                         <span class="num">01</span>
                         <span class="plus">+</span>
                     </div>
-
-                    <input type="submit" value="AddttoCard" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
-
+                    <input type="submit" value="AddoCart" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
                 </div>
                 <div class="" style="margin-top:20px">
                     <input type="submit" value="Buy with Shop Pay" class="form-control" style=" background: #5A31F4; color:#123026" />
@@ -117,7 +114,6 @@
 
                 </div>
                 <div>
-
                 </div>
                 <div>
                     <p>Core Features</p>
@@ -263,78 +259,103 @@
                 </div>
 
                 @*<div class="col-12 col-lg-4 col-md-6 ">
-                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
-                    </div>
-                    <div class="col-12 col-lg-4 col-md-6">
-                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
-                    </div>
-                    <div class="col-12 col-lg-4 col-md-6 ">
-                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
-                    </div>
-                    <div class="col-12 col-lg-4 col-md-6 ">
-                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
-                    </div>*@
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 ">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 ">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
+        </div>*@
+                
             </div>
         </div>
     </div>
-  <script type="text/javascript">
+    <script>
+        
+            function myFunction(item) {
+
+               
+                const node = document.createElement("s-size");
+
+              
+                const textnode = document.createTextNode(item);
+
+                
+                node.appendChild(textnode);
+
+
+                document.getElementById("size1").appendChild(node);
+            }
+            //document.getElementById("size").innerHTML=item;
+        
+    </script>
+    <script type="text/javascript">
         const SizeBtn = document.querySelectorAll('.size-radio-btn');
         let checkBtn = 0;
         SizeBtn.forEach((item, i) => {
             item.addEventListener('click', () => {
                 SizeBtn[checkBtn].classList.remove('check');
                 item.classList.add('check');
+                item.classList.add('size');
                 checkBtn = i;
             })
         })
-        var puls = document.querySelector(".plus");
-        var minus = document.querySelector('.minus');
-        var num = document.querySelector('.num');
-        let a = 1;
-        puls.addEventListener("click", () => {
-            a++;
-            a = (a < 10) ? "0" + a : a;
-            num.innerHTML = a;
-            console.log(a);
-        })
-        minus.addEventListener("click", () => {
-            if (a > 1) {
-                a--;
+
+    </script>
+
+    var puls = document.querySelector(".plus");
+            var minus = document.querySelector('.minus');
+            var num = document.querySelector('.num');
+            let a = 1;
+            puls.addEventListener("click", () => {
+                a++;
                 a = (a < 10) ? "0" + a : a;
                 num.innerHTML = a;
+                console.log(a);
+            })
+            minus.addEventListener("click", () => {
+                if (a > 1) {
+                    a--;
+                    a = (a < 10) ? "0" + a : a;
+                    num.innerHTML = a;
 
+                }
+            })
+            var mainimage = document.getElementById("Mainimg");
+            var smallimg = document.getElementsByClassName("small-image");
+            smallimg[0].onclick = function () {
+                mainimage.src = smallimg[0].src;
             }
-        })
-        var mainimage = document.getElementById("Mainimg");
-        var smallimg = document.getElementsByClassName("small-image");
-        smallimg[0].onclick = function () {
-            mainimage.src = smallimg[0].src;
-        }
-        smallimg[1].onclick = function () {
-            mainimage.src = smallimg[1].src;
-        }
-        smallimg[2].onclick = function () {
-            mainimage.src = smallimg[2].src;
-        }
-        smallimg[3].onclick = function () {
-            mainimage.src = smallimg[3].src;
-        }
-    </script>
-    <script type="text/javascript">
-        $("#WriteAreview").click(function (e) {
-           
-             e.preventDefault();
-            $('#reviewForm').toggle();
-        })
-    </script>
-    <script>
-        $(document).ready(function () {
+            smallimg[1].onclick = function () {
+                mainimage.src = smallimg[1].src;
+            }
+            smallimg[2].onclick = function () {
+                mainimage.src = smallimg[2].src;
+            }
+            smallimg[3].onclick = function () {
+                mainimage.src = smallimg[3].src;
+            }
+        </script>
+        <script type="text/javascript">
+            $("#WriteAreview").click(function (e) {
 
-            $(this).scrollTop(0);
+                 e.preventDefault();
+                $('#reviewForm').toggle();
+            })
+        </script>
+        <script>
+            $(document).ready(function () {
 
-            $('#reviewForm').hide()
+                $(this).scrollTop(0);
 
-        });
-    </script>
+                $('#reviewForm').hide()
+
+            });
+        </script>
+    
 </body>
 </html>

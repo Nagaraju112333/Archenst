@@ -12,9 +12,8 @@ function Addtocart(item) {
         url: "/Products/ProductPost/",
         success: function (data) {
             if (data.success) {
-                $("#Carditgem").text("Card(" + data.Counter + ")");
+                $("#Carditgem").text("Cart(" + data.Counter + ")");
             }
-
         },
         error: function () {
             alert("there is something is Wrong....")

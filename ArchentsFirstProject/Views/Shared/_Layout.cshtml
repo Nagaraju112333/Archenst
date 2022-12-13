@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model  ArchentsFirstProject.Models.Register
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,17 +7,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- @*   <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>*@
+    @*   <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>*@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-
-
         * {
             margin: 0;
             padding: 0;
-           box-sizing:border-box;
+            box-sizing: border-box;
         }
 
         #header1 {
@@ -64,7 +63,6 @@
         #navbar {
             display: flex;
             align-items: center;
-           
         }
 
 
@@ -94,174 +92,216 @@
         }
 
 
-        #account{
-            margin:5px;
+        #account {
+            margin: 5px;
         }
-        .Options a:has(:hover){
-            color:black;
 
+        .Options a:has(:hover) {
+            color: black;
         }
-        .Options{
-            margin:20px;
-        }
-       .Options h6 a{
-           color:#123026;
-       }
-       .Options h6 a:hover{
-           color:#c4c1c1;
-       }
-        .dropdown-menu li{
-            margin-left:10px;
-        }
-        .raju{
-            margin:80px;
-        }
-        footer{
-            background-color:#123026;
-            
-         
 
+   
+
+            .Options h6 a {
+                color: #123026;
+            }
+
+                .Options h6 a:hover {
+                    color: #c4c1c1;
+                }
+
+        .dropdown-menu li {
+            margin-left: 10px;
         }
-        .raju1{
-            margin-top:100px;
-            margin-left:10px;
+
+        .raju {
+            margin: 80px;
         }
-        .raju h6 a{
-            color:#9baaa5;
-            font-size:13.5px;
-            
+        footer {
+            background-color: #123026;
         }
-        #social ul li a{
-            color:white;
-            font-size:13.5px;
+
+        .raju1 {
+            margin-top: 100px;
+            margin-left: 10px;
         }
-        .raju p{
+
+        .raju h6 a {
+            color: #9baaa5;
+            font-size: 13.5px;
+        }
+
+        #social ul li a {
+            color: white;
+            font-size: 13.5px;
+        }
+
+        .raju p {
             color: white;
         }
-       
     </style>
 </head>
 <body>
     <section id="header1">
         <h1>Free Shipping +Exchanges over $100. <a href="#">Learn More</a></h1>
-    </section>
-    <div id="header2"  style="display:flex;">
-        <div style="display:flex; margin-left:20px;" >
-            <div>
-                <a href="/Home/Home"><h1 style="color:#000000;">𝐀𝐫𝐜𝐡𝐞𝐧𝐭𝐬 𝐎𝐮𝐭𝐝𝐨𝐨𝐫𝐬</h1></a>
-                <h5 style="margin-left:10px;">Formerly Alice + Whittles</h5>
-            </div>
-            <div class="Options" style="margin-left:100px;justify-content:space-around;display:flex;" >
-                <div style="margin-right:70px;">
-                    <h6> <a href="/WeekendBoot/WeekendBootMainPage/">Weekend Boots</a></h6>
-                </div>
-                <div style="margin-right:70px;">
-                    <h6> <a href="/TerrusClogs/TerrusClogs"> Terrus Clogs</a></h6>
-                </div>
-                <div style="margin-right:70px;">
-                    <h6> <a href="/Accessories/Accessories">Accessories</a></h6>
-                </div>
-                <div  style="margin-right:70px;">
-                    <h6> <a href="/Values/values">Values</a></h6>
-                </div>
-                <div  style="margin-right:70px;">
-                    <h6> <a href="#">Shop All</a></h6>
-                </div>
-            </div>
+        <div aligin="right">
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("1"))
+                {
+                    <p style="color:lightyellow">Hi-@User.Identity.Name</p>
+                }
+                if (User.IsInRole("2"))
+                {
+                    <p style="color:lightyellow;">Hi-@User.Identity.Name</p>
+                }
+            }
         </div>
-        <div  style="justify-content:flex-end;">
-            <div class="icondiv" style="display:flex;justify-content:flex-end;margin-left:120px">
-                <div class="dropdown" id="account">
-                    <button class=" border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                         <i class="fa fa-user-circle-o" style="font-size:25px;"></i>
-                       
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li > <a href="/Account/Login/" class="dropdown-item"> <i class="bi bi-arrow-left-circle" style="margin-right:5px;"></i> Login</a> </li>
-                        <li><a class="dropdown-item" href="/Account/UserRegister/"><i class="bi bi-person-plus"  style="margin-right:5px;"></i>Register</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-bag"  style="margin-right:5px;"></i>  View Card</a></li>
-                         
-
-                    </ul>
+    </section>
+    <div id="header2" style="display:flex;">
+        <div class="row w-100">
+            <div class="col-3">
+                <div class="ms-3">
+                    <a href="/Home/Home"><h1 style="color: #123026; font-size: 36px">𝐀𝐫𝐜𝐡𝐞𝐧𝐭𝐬 𝐎𝐮𝐭𝐝𝐨𝐨𝐫𝐬</h1></a>
+                    <h5>Formerly Alice + Whittles</h5>
                 </div>
+            </div>
+            <div class="col-7 d-flex" style="align-items:center;">
+                <div class="Options" style="justify-content:space-around;display:flex; width:100%">
+                    <div>
+                        <h6> <a href="/WeekendBoot/WeekendBootMainPage/">Weekend Boots</a></h6>
+                    </div>
+                    <div>
+                        <h6> <a href="/TerrusClogs/TerrusClogs"> Terrus Clogs</a></h6>
+                    </div>
+                    <div>
+                        <h6> <a href="/Accessories/Accessories">Accessories</a></h6>
+                    </div>
+                    <div>
+                        <h6> <a href="/Values/values">Values</a></h6>
+                    </div>
+                    <div>
+                        <h6> <a href="#">Shop All</a></h6>
+                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("1"))
+                        {
+                            <div>
+                                <h6> <a href="#">Add Products</a></h6>
 
-
-                <!-- Button trigger modal -->
-                <div id="account">
-
-                    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="fa fa-search"></i>
-                    </button>
+                            </div>
+                            
+                           
+                        }
+                    }
                 </div>
+            </div>
+            <div class="col-2">
+                <div style="">
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <h2>Find anything you need</h2>
-                                <i class="fa fa-search"></i>
-                                <input class="search-box" type="text" placeholder="Red Cotton..." />
+                    <div class="icondiv d-flex justify-content-end" style="display:flex; align-items:center">
+                        <div class="dropdown" id="account">
+                            <button class=" border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-user-circle-o" style="font-size:25px;"></i>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li> <a href="/Account/Logout/" class="dropdown-item"> <i class="bi bi-arrow-left-circle" style="margin-right:5px;"></i>Logout</a> </li>
+                                    <li><a class="dropdown-item" href="/Account/UserRegister/"><i class="bi bi-person-plus" style="margin-right:5px;"></i>Register</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-bag" style="margin-right:5px"></i>  View Card</a></li>
+                                }
+                                else
+                                {
+                                    <li> <a href="/Account/Login/" class="dropdown-item"> <i class="bi bi-arrow-left-circle" style="margin-right:5px;"></i> Login</a> </li>
+                                    <li><a class="dropdown-item" href="/Account/UserRegister/"><i class="bi bi-person-plus" style="margin-right:5px;"></i>Register</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-bag" style="margin-right:5px"></i>  View Card</a></li>
+                                }
+
+
+                            </ul>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <div id="account">
+
+                            <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa fa-search" style="font-size:20px"></i>
+                            </button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h2>Find anything you need</h2>
+                                        <i class="fa fa-search" ></i>
+                                        <input class="search-box" type="text" placeholder="Red Cotton..." />
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div id="account" style=" margin-top:10px;">
+                            <a href="cart4.html">
+                                @Html.Partial("ShopingCart")
+
+                            </a>
+                        </div>
+
                     </div>
-                </div>
-                <div id="account">
-                    <a href="cart4.html">
-                        @Html.Partial("ShopingCart")
-                       
-                    </a>
-                </div>
 
+
+                </div>
             </div>
-
-
         </div>
     </div>
     <div class="MainBody">
         @RenderBody();
     </div>
-<div class="footer1">
-    <footer>
-    <div style="display:flex;">
-        <div class="raju1">
-            <h3> <a href="#" style="color:white;">𝐀𝐫𝐜𝐡𝐞𝐧𝐭𝐬 𝐎𝐮𝐭𝐝𝐨𝐨𝐫𝐬</a></h3>
-            <h6 style=" color:white">Formerly Alice + Whittles</h6>
-        </div>
-        <div style="display:flex;">
-            <div class="raju">
-                <h5 style="color:white;">Our Shop</h5>
-                <h6><a href="#">All Products</a></h6>
-                <h6> <a href="#">The Weekend Boot</a></h6>
-                <h6> <a href="#">The Weekend Boot Z</a></h6>
-                <h6><a href="/TerrusClogs/TerrusClogs">The Terrus</a></h6>
-                <h6> <a href="#">Rain Boots</a></h6>
-                <h6> <a href="#">Accessories</a></h6>
-            </div>
-            <div class="raju">
-                <h5 style="color:white">Help</h5>
-                <h6> <a href="/Links/SizeGuide">Size Guides</a></h6>
-                <h6><a href="/Links/ShippingInfo">Shipping Information</a></h6>
-                <h6> <a href="/Links/Refund">Refund Policy</a></h6>
-                <h6> <a href="/Links/WearCare">Wear, Care and FAQ</a></h6>
-            </div>
-            <div class="raju">
-                <h5 style="color:white;">About Us</h5>
-                <h6> <a href="/Values/values">Values</a></h6>
-                <h6>  <a href="/Links/Terms">Terms of Service</a></h6>
-                <h6><a href="/Links/ContactUs">Contact Us</a></h6>
-                <h6> <a href="/Links/Hiring">We are Hiring</a></h6>
-            </div>
-            <div class="raju">
-                <h5 style="color:white;">Get in Touch</h5>
-                <p style="font-size:13.5px">Call us at 1-800-475-6479 or Email </p>
+    <div class="footer1">
+        <footer>
+            <div style="display:flex;">
+                <div class="raju1">
+                    <h3> <a href="#" style="color:white;">𝐀𝐫𝐜𝐡𝐞𝐧𝐭𝐬 𝐎𝐮𝐭𝐝𝐨𝐨𝐫𝐬</a></h3>
+                    <h6 style=" color:white">Formerly Alice + Whittles</h6>
+                </div>
+                <div style="display:flex;">
+                    <div class="raju">
+                        <h5 style="color:white;">Our Shop</h5>
+                        <h6><a href="#">All Products</a></h6>
+                        <h6> <a href="#">The Weekend Boot</a></h6>
+                        <h6> <a href="#">The Weekend Boot Z</a></h6>
+                        <h6><a href="/TerrusClogs/TerrusClogs">The Terrus</a></h6>
+                        <h6> <a href="#">Rain Boots</a></h6>
+                        <h6> <a href="#">Accessories</a></h6>
+                    </div>
+                    <div class="raju">
+                        <h5 style="color:white">Help</h5>
+                        <h6> <a href="/Links/SizeGuide">Size Guides</a></h6>
+                        <h6><a href="/Links/ShippingInfo">Shipping Information</a></h6>
+                        <h6> <a href="/Links/Refund">Refund Policy</a></h6>
+                        <h6> <a href="/Links/WearCare">Wear, Care and FAQ</a></h6>
+                    </div>
+                    <div class="raju">
+                        <h5 style="color:white;">About Us</h5>
+                        <h6> <a href="/Values/values">Values</a></h6>
+                        <h6>  <a href="/Links/Terms">Terms of Service</a></h6>
+                        <h6><a href="/Links/ContactUs">Contact Us</a></h6>
+                        <h6> <a href="/Links/Hiring">We are Hiring</a></h6>
+                    </div>
+                    <div class="raju">
+                        <h5 style="color:white;">Get in Touch</h5>
+                        <p style="font-size:13.5px">Call us at 1-800-475-6479 or Email </p>
 
 
-                <p style="font-size:13.5px;">support@archentsoutdoors.com</p>
-               
+                        <p style="font-size:13.5px;">support@archentsoutdoors.com</p>
+
+                    </div>
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
-</footer></div>
 </body>
 </html>

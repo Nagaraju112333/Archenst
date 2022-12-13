@@ -37,12 +37,11 @@
     cursor: pointer;
 }
 
-@*.size-radio-btn.check {
+.size-radio-btn.check {
     background-color: #383838;
     color: #fff;
 }
 
-*@
 .size-radio-btn.check {
     background: #383838;
     color: #fff;
@@ -50,15 +49,15 @@
 
 .wrapper {
     height: 40px;
-    @* max-width:150px;
-    *@ width:150px;
+     max-width:150px;
+     width:150px;
     background: #FFF;
-    @* border-radius:12px;
-    *@ display:flex;
+    border-radius:12px;
+     display:flex;
     align-items: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    @* margin-top:30px;
-    *@
+     margin-top:30px;
+    
 }
 
     .wrapper span {
@@ -101,8 +100,8 @@
 
 .small-image-group {
     display: flex;
-    @* justify-content:space-between;
-    *@
+    justify-content:space-between;
+    
 }
 
 .small-image-col {

@@ -16,13 +16,15 @@ namespace ArchentsFirstProject.Controllers
         {
             return View();
         }
-        ArchentsEntities6 db = new ArchentsEntities6();
+      
+        ArchentsEntities5 db = new ArchentsEntities5();
         [HttpGet]
         public ActionResult WeekendBootMainPage()
         {
             ViewBag.data = db.Products1.Where(x => x.CategoryID == 800).ToList();
             return View();
         }
+   
         [HttpPost]
         public   JsonResult WeekendBootMainPage(int Itemid)
         {
@@ -54,6 +56,6 @@ namespace ArchentsFirstProject.Controllers
             return View();
         }
 
-        
+      
     }
 }

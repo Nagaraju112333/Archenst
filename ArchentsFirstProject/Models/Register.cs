@@ -17,7 +17,8 @@ namespace ArchentsFirstProject.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Register()
         {
-            this.Order_tbl = new HashSet<Order_tbl>();
+            this.OrderDetails = new HashSet<OrderDetail>();
+            this.User_Shiping_Address = new HashSet<User_Shiping_Address>();
             this.ShopingCartModels = new HashSet<ShopingCartModel>();
         }
     
@@ -30,9 +31,14 @@ namespace ArchentsFirstProject.Models
         public System.Guid ActivationCode { get; set; }
         public string ResetpasswordCode { get; set; }
         public string Phone_Number { get; set; }
+        public Nullable<int> RoleType { get; set; }
+        public Nullable<int> Roleid { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_tbl> Order_tbl { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual Role Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User_Shiping_Address> User_Shiping_Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShopingCartModel> ShopingCartModels { get; set; }
     }

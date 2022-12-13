@@ -7,3 +7,4 @@ SizeBtn.forEach((item, i) => {
         checkBtn = i;
     })
 })
+document.getElementById("size").innerHTML = value();

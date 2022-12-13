@@ -23,15 +23,15 @@
             @if (Session["CardCounter"] == null)
             {
 @*                @Html.ActionLink(linkText: "Card(" + Session["CardCounter"] + ")", actionName: "shopingCartDetails", routeValues: "Products", htmlAttributes: new { id = "Carditgem" })
-*@            <a href="/Products/shopingCartDetails" id="Carditgem">
+*@          <a href="/Products/shopingCartDetails" id="Carditgem">
                 <i class="bi bi-bag-plus-fill"></i><p style="color:red;">@Session["CardCounter"]</p>
             </a>
             }
             else
             {
-@*                @Html.ActionLink(linkText: "Card(" + Session["CardCounter"] + ")", actionName: "shopingCartDetails", routeValues: "Products", htmlAttributes: new { id = "Carditgem" })
+   @*                @Html.ActionLink(linkText: "Card(" + Session["CardCounter"] + ")", actionName: "shopingCartDetails", routeValues: "Products", htmlAttributes: new { id = "Carditgem" })
 *@
-            <a href="/Products/shopingCartDetails" id="Carditgem">
+          <a href="/Products/shopingCartDetails" id="Carditgem">
                 <i class="bi bi-bag-plus-fill"></i>(@Session["CardCounter"])
 
             </a>
