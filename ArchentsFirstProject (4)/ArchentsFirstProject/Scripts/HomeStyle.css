@@ -1,0 +1,172 @@
+﻿body {
+    background-color: #DADCE1;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+}
+
+.Welcome-image {
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+.Welcome-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.btn {
+    border: none;
+    background-color: #043E3E;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 18px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+}
+
+    .btn:hover {
+        background-color: #043E3E;
+        color: white;
+    }
+
+.SpngRw {
+    display: table;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.SpngClm {
+    display: table-cell; /*Optional*/
+}
+
+.ImgRw {
+    display: flex;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+.ImgClm {
+    flex: 35%;
+    padding: 5px;
+    margin: 0;
+}
+
+.ImgClmImg {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+    .ImgClmImg:hover {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+
+.btnRwlast1 {
+    border: none;
+    background-color: #043E3E;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 18px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+    position: relative;
+    text-align: center;
+    transform: translate(130%, -279%);
+}
+
+    .btnRwlast1:hover {
+        background-color: #043E3E;
+        color: white;
+    }
+
+.btnRwlast2 {
+    border: none;
+    background-color: #043E3E;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 18px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+    position: relative;
+    text-align: center;
+    transform: translate(480%, -279%);
+}
+
+    .btnRwlast2:hover {
+        background-color: #043E3E;
+        color: white;
+    }
+
+.Crtbtn {
+    border: none;
+    background-color: #0E6B5A;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 18px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+}
+
+    .Crtbtn:hover {
+        background-color: #0E6B5A;
+        color: white;
+    }
+
+.ImgRwlast1 {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.ImgRwlastBtn {
+    display: flex;
+    text-align: center;
+    background-color: white;
+    table-layout: fixed;
+}
+
+.Submit {
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+}
+
+.btnSubmit {
+    border: none;
+    background-color: #043E3E;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Maiandra GD;
+    color: white;
+}

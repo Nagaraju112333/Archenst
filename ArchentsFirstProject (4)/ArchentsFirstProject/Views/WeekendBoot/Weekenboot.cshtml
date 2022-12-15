@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Weekenboot";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <img src="~/Content/WeekendBootimages/Secondimage1.jpg" alt="logo" id="image"/>
+    <script>
+        var image = document.getElementById("image")
+
+        //Now, we need to add an Event Listener to listen when the image gets mouse over.
+
+        image.addEventListener('mouseover', function () {
+            image.src = "~/Content/WeekendBootimages/Secondimage.jpg"
+        })
+        image.addEventListener('mouseout', function () {
+            image.src = "~/Content/WeekendBootimages/Secondimage1.jpg"
+        })
+    </script>
+</body>
+</html>

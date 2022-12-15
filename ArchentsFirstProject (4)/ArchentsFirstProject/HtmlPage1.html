@@ -1,0 +1,61 @@
+﻿
+
+
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <a href="#" id="home">
+           
+            <img id='menuImg' src="Content/WeekendBootimages/Secondimage.jpg" alt="logo" width="200" height="150"
+                 onmouseover="onHover();" onmouseout="offHover();"/>
+        </a>
+        <h1>Welcome</h1>
+    </div>
+   <script>
+       function onHover() {
+           $("#menuImg").attr('src', 'Content/WeekendBootimages/Secondimage1.jpg');
+       }
+
+       function offHover() {
+           $("#menuImg").attr('src', 'Content/WeekendBootimages/Secondimage.jpg');
+       }
+   </script>
+    <!--<img src="~/Content/WeekendBootimages/Secondimage1.jpg" />
+        <script>
+
+            function setnewimage() {
+                document.getElementById("img2").src = "~/Content/WeekendBootimages/Secondimage1.jpg";
+            }
+            function setnewimage1() {
+                document.getElementById("img2").src = "myquiz2.png";
+            }
+            function setnewimage2() {
+                document.getElementById("img2").src = "myquiz3.png";
+            }
+            function setnewimage3() {
+                document.getElementById("img2").src = "pic33.png";
+            }
+            function setoldimage() {
+                document.getElementById("img2").src = "myquiz1.png";
+            }
+        </script>
+        <div>
+            <img id="img2" src="" wid>
+
+            <br>
+            <img id="img1" src="~/Content/WeekendBootimages/Secondimage.jpg" onmouseover="setnewimage()"
+                 width="300" onmouseout="setoldimage()">
+            <img id="img66" src="myquiz2.PNG" onmouseover="setnewimage1()"
+                 width="300" height="200" onmouseout="setoldimage()">
+            <img id="img87" src="myquiz3.PNG" onmouseover="setnewimage2()"
+                 width="300" height="200" onmouseout="setoldimage()">
+            <img id="img80" src="pic33.PNG" onmouseover="setnewimage3()"
+                 width="300" height="200" onmouseout="setoldimage()">
+        </div>-->
+</body>
+</html>

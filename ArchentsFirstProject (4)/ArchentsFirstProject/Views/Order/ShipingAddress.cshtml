@@ -1,0 +1,46 @@
+﻿@model  ArchentsFirstProject.Models.relationship
+@{
+    ViewBag.Title = "ShipingAddress";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<body>
+    <div class="container">
+        @using (Html.BeginForm("Paymentmethod", "Order", FormMethod.Post))
+        {
+            <div class="row">
+                @Html.LabelFor(m => m.name)
+                @Html.TextBoxFor(model => model.name, new { @class = "form-control w-50" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.email)
+                @Html.TextBoxFor(model => model.email, new { @class = "form-control w-50" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.contactNumber)
+                @Html.TextBoxFor(model => model.contactNumber, new { @class = "form-control w-50" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.address)
+                @Html.TextBoxFor(model => model.address, new { @class = "form-control w-50" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.amount)
+                @Html.TextBoxFor(model => model.amount, new { @class = "form-control w-50" })
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="ContinueToProcess" class="form-control form-group-sm w-25 btn btn-success" />
+            </div>
+        }
+    </div>
+</body>
+<!-- This form is hidden, and submit when payment successfully made -->
+@using (Html.BeginForm("Complete", "Home"))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.Hidden("rzp_paymentid")
+    @Html.Hidden("rzp_orderid")
+    <button type="submit" id="rzp-paymentresponse" class="btn btn-primary" hidden>Submit</button>
+}

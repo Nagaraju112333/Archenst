@@ -8,7 +8,7 @@ namespace ArchentsFirstProject.Controllers
 {
     public class TerrusClogsController : Controller
     {
-        private ArchentsEntities5 db=new ArchentsEntities5();
+        private ArchentsEntities7 db=new ArchentsEntities7();
         // GET: TerrusClogs
         public ActionResult Index()
         {

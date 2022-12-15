@@ -13,10 +13,10 @@ namespace ArchentsFirstProject.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArchentsEntities5 : DbContext
+    public partial class ArchentsEntities7 : DbContext
     {
-        public ArchentsEntities5()
-            : base("name=ArchentsEntities5")
+        public ArchentsEntities7()
+            : base("name=ArchentsEntities7")
         {
         }
     
@@ -37,5 +37,6 @@ namespace ArchentsFirstProject.Models
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User_Shiping_Address> User_Shiping_Address { get; set; }
+        public virtual DbSet<OrderDetails1> OrderDetails1 { get; set; }
     }
 }

@@ -7,7 +7,7 @@
 
 <html onload="parent.scrollTo(0,0);">
 <head>
-    <script src="~/Scripts/Product/Cart.js"></script>
+  @* <script src="~/Scripts/Product/Cart.js"></script>*@
  
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -30,7 +30,7 @@
             $(document).ready(function () {
                 function Addtocart(item) {
                     var itemId = $(item).attr("itemid");
-                    alert(itemId);
+                    alert(itemId);  
                 }
             })
         </script>*@
@@ -45,8 +45,6 @@
             </div>
         </div>
         <div class="Main">
-
-
             <div class="LeftBoot">
                 <div>
                     <img id="Mainimg" class="img-fluid w-75  ml-5 mt-2" src="~/Content/WeekendBootimages/@c.Image1" height:500; alt="logo" />
@@ -74,18 +72,18 @@
                     <i class="bi bi-star-fill"></i>
                     <p>12 reviews</p>
                 </div>
-                <div>
-                    Size <h2 id="size1" for="s-size"></h2>
-
+                <div style="display:flex;">
+                    <p>Size:</p>
+                     <h5 id="size1" name="SizeOfProducts1"></h5>
                 </div>
 
                 <div class="Sizes">
                     @foreach (var a in ViewBag.size)
                     {
-                        <input type="radio" name="size" hidden value="@a.size1" id="s-size" onclick="myFunction(@a.size1)" />
-                        <label for="s-size" class="size-radio-btn">@a.size1</label>
+                        <input type="radio" name="size" hidden value="@a.size1" id="s-size" />
+                        <label for="s-size" class="size-radio-btn" onclick="myFunction(@a.size1)">@a.size1</label>
                     }
-                     @* <input type="radio" name="size" value="37" hidden id="m-size" />
+                    @* <input type="radio" name="size" value="37" hidden id="m-size" />
                         <label for="m-size" class="size-radio-btn">37</label>
                         <input type="radio" name="size" value="38" hidden id="m-size" />
                         <label for="m-size" class="size-radio-btn">38</label>
@@ -99,12 +97,18 @@
                         <label for="m-size" class="size-radio-btn">44</label>*@
                 </div>
                 <div style="display:flex; margin-top:30px;">
-                    <div class="wrapper">
-                        <span class="minus">-</span>
-                        <span class="num">01</span>
-                        <span class="plus">+</span>
-                    </div>
-                    <input type="submit" value="AddoCart" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
+                    @*<div class="wrapper">
+            <span class="minus">-</span>
+            <span class="num">01</span>
+            <span class="plus">+</span>
+        </div>*@
+                    <form action="/Products/ProductPost" method="post">
+                        <input type="hidden" name="SizeOfProducts" value="" id="inputsize" />
+                        <input type="hidden"  name="ItemId"  value="@c.Product_Id"/>
+                        <input type="submit" class="form-control" value="AddToCart" style=" border-radius:20px; background:#123026;color:#FFFFFF;text-align:center;">
+                    </form>
+                    @*                   <input type="submit" value="AddoCart" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
+                    *@
                 </div>
                 <div class="" style="margin-top:20px">
                     <input type="submit" value="Buy with Shop Pay" class="form-control" style=" background: #5A31F4; color:#123026" />
@@ -258,41 +262,48 @@
                     <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
                 </div>
 
-                @*<div class="col-12 col-lg-4 col-md-6 ">
-            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
-        </div>
-        <div class="col-12 col-lg-4 col-md-6">
-            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 ">
-            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 ">
-            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
-        </div>*@
-                
+                @*    <div class="col-12 col-lg-4 col-md-6 ">
+                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6 ">
+                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6 ">
+                        <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
+                    </div>*@
             </div>
         </div>
     </div>
     <script>
-        
-            function myFunction(item) {
+        var result;
+        function myFunction(item) {
+            document.getElementById("size1").innerHTML = "";
+           @* const node = document.createElement("s-size");*@
+            const node = document.getElementById("size1");
+            const textnode = document.createTextNode(item);
+            result = Number(textnode.data);
+            node.appendChild(textnode);
+            document.getElementById("size1").innerHTML = result;
+            $("#inputsize").val(result);
+           @* $.ajax({
+                type: "POST",
+                url: '/Products/Values',
+                data: '{value:' + result + '}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "text",
+                success: function (r) {
+                    console.log(r)
+                }
+            });*@
+       }
 
-               
-                const node = document.createElement("s-size");
-
-              
-                const textnode = document.createTextNode(item);
-
-                
-                node.appendChild(textnode);
-
-
-                document.getElementById("size1").appendChild(node);
-            }
             //document.getElementById("size").innerHTML=item;
-        
+
     </script>
+
     <script type="text/javascript">
         const SizeBtn = document.querySelectorAll('.size-radio-btn');
         let checkBtn = 0;
@@ -307,55 +318,24 @@
 
     </script>
 
-    var puls = document.querySelector(".plus");
-            var minus = document.querySelector('.minus');
-            var num = document.querySelector('.num');
-            let a = 1;
-            puls.addEventListener("click", () => {
-                a++;
-                a = (a < 10) ? "0" + a : a;
-                num.innerHTML = a;
-                console.log(a);
-            })
-            minus.addEventListener("click", () => {
-                if (a > 1) {
-                    a--;
-                    a = (a < 10) ? "0" + a : a;
-                    num.innerHTML = a;
 
-                }
-            })
-            var mainimage = document.getElementById("Mainimg");
-            var smallimg = document.getElementsByClassName("small-image");
-            smallimg[0].onclick = function () {
-                mainimage.src = smallimg[0].src;
-            }
-            smallimg[1].onclick = function () {
-                mainimage.src = smallimg[1].src;
-            }
-            smallimg[2].onclick = function () {
-                mainimage.src = smallimg[2].src;
-            }
-            smallimg[3].onclick = function () {
-                mainimage.src = smallimg[3].src;
-            }
-        </script>
-        <script type="text/javascript">
-            $("#WriteAreview").click(function (e) {
 
-                 e.preventDefault();
-                $('#reviewForm').toggle();
-            })
-        </script>
-        <script>
-            $(document).ready(function () {
+    <script type="text/javascript">
+        $("#WriteAreview").click(function (e) {
 
-                $(this).scrollTop(0);
+            e.preventDefault();
+            $('#reviewForm').toggle();
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
 
-                $('#reviewForm').hide()
+            $(this).scrollTop(0);
 
-            });
-        </script>
-    
+            $('#reviewForm').hide()
+
+        });
+    </script>
+
 </body>
 </html>

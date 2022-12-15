@@ -49,7 +49,7 @@
                         <label>TotalPrice</label>
                     </td>
                 </tr>
-                @foreach (var item in Model)
+                @foreach (var item in  Model)
                 {
                     totalamount += Convert.ToInt32(item.TotalPrice);
                      <tr id="trrr">
@@ -57,7 +57,14 @@
                             <img src="~/Content/WeekendBootimages/@item.Imagepath" height="70px" width="70px" class="img-rounded" id="image" />
                         </td>
                         <td>
+                            @if(@item.Size!=null && @item.Size!=0){
+                            @item.ItemName<br /><p>Size: @item.Size</p>
+                            }
+                            else{
                             @item.ItemName
+                            }
+
+
                         </td>
 
                         <td>

@@ -104,7 +104,8 @@ warning 6013: The table/view 'Archents.dbo.Payment' does not have a primary key 
     <Property Name="TotalPrice" Type="int" />
     <Property Name="CartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserId" Type="int" />
-    <Property Name="ProductDataTime" Type="datetime" />
+    <Property Name="Ondate" Type="datetime" />
+    <Property Name="Size" Type="int" />
   </EntityType>
   <EntityType Name="size">
     <Key>
@@ -149,6 +150,17 @@ warning 6013: The table/view 'Archents.dbo.Payment' does not have a primary key 
     <Property Name="Pincode" Type="varchar" MaxLength="50" />
     <Property Name="Phone_Number" Type="varchar" MaxLength="50" />
     <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderDetails1">
+    <Key>
+      <PropertyRef Name="OderDetaislId" />
+    </Key>
+    <Property Name="OderDetaislId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="productid" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
   </EntityType>
   <Association Name="FK__OrderDeta__Addre__2645B050">
     <End Role="User_Shiping_Address" Type="Self.User_Shiping_Address" Multiplicity="0..1" />
@@ -258,6 +270,18 @@ warning 6013: The table/view 'Archents.dbo.Payment' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_OrderDetails_OrderDetails">
+    <End Role="OrderDetails1" Type="Self.OrderDetails1" Multiplicity="1" />
+    <End Role="OrderDetails11" Type="Self.OrderDetails1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OrderDetails1">
+        <PropertyRef Name="OderDetaislId" />
+      </Principal>
+      <Dependent Role="OrderDetails11">
+        <PropertyRef Name="OderDetaislId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ShopingCartModel_Register">
     <End Role="Register" Type="Self.Register" Multiplicity="0..1" />
     <End Role="ShopingCartModel" Type="Self.ShopingCartModel" Multiplicity="*" />
@@ -283,6 +307,7 @@ warning 6013: The table/view 'Archents.dbo.Payment' does not have a primary key 
     <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User_Shiping_Address" EntityType="Self.User_Shiping_Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetails1" EntityType="Self.OrderDetails1" Schema="Order" Table="OrderDetails" store:Type="Tables" />
     <AssociationSet Name="FK__OrderDeta__Addre__2645B050" Association="Self.FK__OrderDeta__Addre__2645B050">
       <End Role="User_Shiping_Address" EntitySet="User_Shiping_Address" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
@@ -318,6 +343,10 @@ warning 6013: The table/view 'Archents.dbo.Payment' does not have a primary key 
     <AssociationSet Name="FK__User_Ship__UserI__2180FB33" Association="Self.FK__User_Ship__UserI__2180FB33">
       <End Role="Register" EntitySet="Register" />
       <End Role="User_Shiping_Address" EntitySet="User_Shiping_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_OrderDetails" Association="Self.FK_OrderDetails_OrderDetails">
+      <End Role="OrderDetails1" EntitySet="OrderDetails1" />
+      <End Role="OrderDetails11" EntitySet="OrderDetails1" />
     </AssociationSet>
     <AssociationSet Name="FK_ShopingCartModel_Register" Association="Self.FK_ShopingCartModel_Register">
       <End Role="Register" EntitySet="Register" />

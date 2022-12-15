@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 using System.Web;
@@ -13,7 +14,7 @@ namespace ArchentsFirstProject.Controllers
     public class ProductsController : Controller
     {
         // GET: Products
-        ArchentsEntities5 db=new ArchentsEntities5();   
+        ArchentsEntities7 db=new ArchentsEntities7();   
         public ActionResult Index()
         {
             return View();
@@ -49,59 +50,144 @@ namespace ArchentsFirstProject.Controllers
         public List<size> GetSizes(int id)
         {
             var result=db.sizes.Where(x=>x.ProductId==id).ToList();
+           
             return result;
         }
-      /*  public  ActionResult ProductPost()
+        [HttpGet]
+        public ActionResult ProductSave()
         {
-          
             return View();
-        }*/
-        private List<ShopingCartModel> listofshopingcart = new List<ShopingCartModel>();
-      //  private List<ShopingCartModel> listofshopingcart = new List<ShopingCartModel>();
+        }
         [HttpPost]
-     
-        public JsonResult ProductPost(string ItemId)
+        public ActionResult ProductSave(string ItemId)
         {
-            var result = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().RegisterId;
-            ViewBag.registerid=result;
-            TempData["ID"] = result;
             ShopingCartModel list1 = new ShopingCartModel();
             Products1 productsss = db.Products1.Single(model => model.Product_Id.ToString() == ItemId);
-            if (Session["CardCounter"] != null)
+            if (productsss != null)
             {
-                listofshopingcart = Session["Carditgem"] as List<ShopingCartModel>;
-            }
-            if (listofshopingcart.Any(model => model.ItemId.ToString() == ItemId))
-            {
-                list1 = listofshopingcart.Single(model => model.ItemId.ToString() == ItemId);
-                list1.Quantity = list1.Quantity + 1;
-                list1.TotalPrice = list1.Quantity * list1.UnitPrice;
-            }
-           /* if (listofshopingcart.Any(model => model.ItemId.ToString() == ItemId))
-            {
-                list1 = listofshopingcart.Single(model => model.ItemId.ToString() == ItemId);
-                list1.Quantity = list1.Quantity - 1;
-                list1.TotalPrice = (list1.Quantity *list1.UnitPrice)-list1.UnitPrice;
-            }*/
-            else
-            {
+
                 list1.ItemId = Convert.ToInt32(ItemId);
                 list1.ItemName = productsss.Product_Name;
                 list1.Description = productsss.product_Description;
                 list1.price = productsss.Price;
                 list1.Quantity = 1;
-                list1.UserId = Convert.ToInt32( TempData["ID"]);
+                list1.UserId = Convert.ToInt32(TempData["ID"]);
                 list1.TotalPrice = Convert.ToInt32(productsss.Price);
                 list1.UnitPrice = productsss.Price;
                 list1.Imagepath = productsss.Image1;
-                list1.ProductDataTime = list1.ProductDataTime;
+
                 listofshopingcart.Add(list1);
+
                 db.ShopingCartModels.Add(list1);
                 db.SaveChanges();
             }
-            Session["CardCounter"] = listofshopingcart.Count;
-            Session["Carditgem"] = listofshopingcart;
-            return Json(data: new { success = true, Counter = listofshopingcart.Count }, JsonRequestBehavior.AllowGet);
+            return View(listofshopingcart);
+        }
+
+        //  private List<ShopingCartModel> listofshopingcart = new List<ShopingCartModel>();
+
+
+        /*  public ActionResult ProductPost(string ItemId)
+          {
+              var result = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().RegisterId;
+              ViewBag.registerid = result;
+              TempData["ID"] = result;
+              var result1 = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault();
+              List<ShopingCartModel> list = new List<ShopingCartModel>();
+              ShopingCartModel list1=new ShopingCartModel();
+              Products1 productsss = db.Products1.Single(model => model.Product_Id.ToString() == ItemId);
+              if(Session["CartCounter"] != null)
+              {
+                  list = db.ShopingCartModels.Where(x => x.UserId == result1.RegisterId).ToList();
+              }
+              else
+              {
+
+                  list1.ItemId = Convert.ToInt32(ItemId);
+                  list1.ItemName = productsss.Product_Name;
+                  list1.Description = productsss.product_Description;
+                  list1.price = productsss.Price;
+                  list1.Quantity = 1;
+                  list1.UserId = Convert.ToInt32(TempData["ID"]);
+                  list1.TotalPrice = Convert.ToInt32(productsss.Price);
+                  list1.UnitPrice = productsss.Price;
+                  list1.Imagepath = productsss.Image1;
+
+                  listofshopingcart.Add(list1);
+
+                  db.ShopingCartModels.Add(list1);
+                  db.SaveChanges();
+              }
+              Session["CartCounter"] = listofshopingcart.Count;
+              return View();
+
+          }*/
+        public ActionResult Values(int value)
+        {
+            TempData["name"] = value;
+            ViewBag.size = value;
+            return View();
+        }
+        private List<ShopingCartModel> listofshopingcart = new List<ShopingCartModel>();
+
+        public ActionResult ProductPost(string ItemId,int SizeOfProducts=0)
+        {
+
+            var sizedata = Convert.ToInt32(SizeOfProducts);
+            var size1= ViewBag.size;
+          
+            if (User.Identity.IsAuthenticated)
+            {
+                
+                var result = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().RegisterId;
+                ViewBag.registerid = result;
+                TempData["ID"] = result;
+                var result1 = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault();
+                ShopingCartModel list1 = new ShopingCartModel();
+                var productsss = db.Products1.FirstOrDefault(model => model.Product_Id.ToString() == ItemId);
+                /* if (Session["CardCounter"] != null)
+                 {
+                     listofshopingcart = Session["Carditgem"] as List<ShopingCartModel>;
+                 }*/
+                /* if (result1 != null)
+                 {
+                     listofshopingcart = db.ShopingCartModels.Where(x => x.UserId == result1.RegisterId).ToList();
+                 }*/
+                var sameitem = db.ShopingCartModels.Where(x => x.ItemId.ToString() == ItemId && x.UserId == result1.RegisterId).ToList();
+                if (sameitem.Count > 0)
+                {
+                    list1 = db.ShopingCartModels.FirstOrDefault(model => model.ItemId.ToString() == ItemId);
+                    list1.Quantity = list1.Quantity + 1;
+                    list1.TotalPrice = list1.Quantity * list1.UnitPrice;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    list1.ItemId = Convert.ToInt32(ItemId);
+                    list1.ItemName = productsss.Product_Name;
+                    list1.Description = productsss.product_Description;
+                    list1.price = productsss.Price;
+                    list1.Quantity = 1;
+                    list1.UserId = Convert.ToInt32(TempData["ID"]);
+                    list1.TotalPrice = Convert.ToInt32(productsss.Price);
+                    list1.UnitPrice = productsss.Price;
+                    list1.Imagepath = productsss.Image1;
+                    list1.Size = sizedata;
+                    listofshopingcart.Add(list1);
+                    db.ShopingCartModels.Add(list1);
+                    db.SaveChanges();
+                }
+                /*   Session["CardCounter"] = listofshopingcart.Count;
+                   Session["Carditgem"] = listofshopingcart;*/
+                //return Json(data: new { success = true, Counter = listofshopingcart.Count }, JsonRequestBehavior.AllowGet);
+
+                return RedirectToAction("shopingCartDetails");
+            }
+            else
+            {
+                
+                return RedirectToAction("Login", "Account");
+            }
         }
         public ActionResult RemoveCartItem(int id)
         {
@@ -109,8 +195,6 @@ namespace ArchentsFirstProject.Controllers
             ShopingCartModel result = db.ShopingCartModels.FirstOrDefault(x => x.CartId == id);
             db.ShopingCartModels.Remove(result);
             db.SaveChanges();
-            Session["CardCounter"] = null;
-            Session["Carditgem"] = null;
             return Redirect("/Products/shopingCartDetails");
             //return View();
 
@@ -139,31 +223,30 @@ namespace ArchentsFirstProject.Controllers
             return details;
         }*/
         public ActionResult shopingCartDetails()
-
         {
             var result = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().RegisterId;
             ViewBag.registerid = result;
             var result1 = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault();
             TempData["ID"] = result1;
-                List<ShopingCartModel> list = new List<ShopingCartModel>();
+                List<ShopingCartModel> resultdata = new List<ShopingCartModel>();
             
-             //var result = db.ShopingCartModels.FirstOrDefault(x => x.UserId == id);
-                if (Session["Carditgem"] ==null)
-                {
+               resultdata = db.ShopingCartModels.Where(x => x.UserId == result1.RegisterId).ToList();
+               TempData["name"]=resultdata.Count;
 
-                /* list = db.ShopingCartModels.ToList();*/
-                list = db.ShopingCartModels.ToList();
-               
-                }
+            /*if (Session["Carditgem"] ==null)
+            {
 
-                else
-                {
-                    list = Session["Carditgem"] as List<ShopingCartModel>;
+            *//* list = db.ShopingCartModels.ToList();*//*
+                 ViewBag.cartdata = db.ShopingCartModels.ToList();
+            }
+            else
+            {
+                list = Session["Carditgem"] as List<ShopingCartModel>;
 
-                }
-
-
-            return View(list);
+            }
+*/
+            Session["CartCount"] = resultdata.Count;
+            return View(resultdata);
         }
        /* [HttpGet]
         public ShopingCartModel AllProductDetaisl111(int id)
@@ -175,14 +258,7 @@ namespace ArchentsFirstProject.Controllers
             return result111111;
            
         }*/
-        public ShopingCartModel RemoveCartItem1(int? id)
-        {
-            ViewBag.id = id;
-            var result = db.ShopingCartModels.FirstOrDefault(x => x.ItemId == id);
-            db.ShopingCartModels.Remove(result);
-            db.SaveChanges();
-            return result;
-        }
+      
 
 
         /* public ActionResult AddOrder()
@@ -216,7 +292,26 @@ namespace ArchentsFirstProject.Controllers
              return RedirectToAction("WeeknedBoots");
          }*/
 
-
+       public ActionResult Getalldata()
+       {
+            
+            var result = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().RegisterId;
+            ViewBag.registerid = result;
+           // id = ViewBag.registerid;
+            List<ShopingCartModel> list = new List<ShopingCartModel>();
+            if (Session["Carditgem"] == null)
+            {
+                var result11 = db.ShopingCartModels.ToList();
+                ViewBag.daata = result11;
+            }
+            else
+            {
+                var result11 = db.ShopingCartModels.ToList();
+                ViewBag.daata = result11;
+                list = Session["Carditgem"] as List<ShopingCartModel>;
+            }
+            return View();
+       }
     }
   
 }

@@ -1,0 +1,107 @@
+﻿@model  IEnumerable<ArchentsFirstProject.Models.ShopingCartModel>
+@{
+    ViewBag.Title = "shopingCartDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal totalamount = 0;
+}
+<html>
+<head>
+    <style>
+        #Labels  label{
+            font-size:1em;
+            font-weight:800;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const close = document.querySelectorAll("#tab");
+            const closebtn = document.getElementById("#closebtn");
+            for (let i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', "#closebtn", () => {
+                    
+                    close[i].parentElement.style.display = "none";
+                })
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color:#808080">shopingCartDetails</h2>
+        @using (Html.BeginForm("ShipingAddress", "Order", FormMethod.Post))
+        {
+            <table class="table" id="tab">
+                <tr id="Labels">
+                    <td>
+                        <label>Image</label>
+                    </td>
+                    <td>
+                        <label style="text-align:center;">Name</label>
+                    </td>
+                    <td>
+                        <label>Quantity</label>
+                    </td>
+                    <td>
+                        <label>UnitPrice</label>
+                    </td>
+                    <td>
+                        <label>TotalPrice</label>
+                    </td>
+                </tr>
+                @foreach (var item in  Model)
+                {
+                    totalamount += Convert.ToInt32(item.TotalPrice);
+                     <tr id="trrr">
+                        <td>
+                            <img src="~/Content/WeekendBootimages/@item.Imagepath" height="70px" width="70px" class="img-rounded" id="image" />
+                        </td>
+                        <td>
+                            @item.ItemName
+                        </td>
+
+                        <td>
+                            @item.Quantity
+                        </td>
+                        <td>
+                            @item.UnitPrice
+                        </td>
+                        <td>
+                            @item.TotalPrice
+                        </td>
+                        <td>
+                            <div class="icon">
+                                @*<a href="#" id="closebtn" onclick="closebtn()"> <i class="bi bi-trash3-fill"></i></a>*@
+                                <a href="/Products/RemoveCartItem?id=@item.CartId"><i class="bi bi-trash3-fill"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                   
+                }
+                <tr style="border-top:2px solid maroon">
+                    <td colspan="4" style="text-align:right">
+                        <h3>
+                            Total Amount
+                        </h3>
+                    </td>
+                    <td style="text-align:right">
+                        @totalamount
+                    </td>
+                </tr>
+                <tr style="text-align:right">
+                    <td colspan="5">
+                        <input type="submit" value="Checkout" class="btn btn-success" />
+
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+
+</body>
+</html>
+
+
+
+
+

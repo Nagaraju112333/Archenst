@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerifyAccount</title>
+</head>
+<body>
+    <div class="container">
+        @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+        {
+            <div class="alert alert-success">
+                <strong>Success!</strong> your Account Has Been Successfully Activated. Click here to @Html.ActionLink("Login", "Login", "Account")
+            </div>
+        }
+        else
+        {
+            <strong>Error!</strong>@ViewBag.message
+        }
+    </div>
+</body>
+</html>

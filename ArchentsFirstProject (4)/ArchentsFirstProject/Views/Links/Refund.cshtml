@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Refund";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Refund Policy</title>
+    <style>
+        .form-width {
+            width: 70%;
+            padding-left: 25rem;
+        }
+
+            .form-width h2 {
+                color: #123026;
+            }
+
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+            .active, .collapsible:hover {
+                background-color: white;
+            }
+
+            .collapsible:after {
+                content: '\002B';
+                color: black;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <img src="~/Content/LinksImages/Footer4.png" width="100%" />
+    <div class="form-width">
+
+        <h2>Returns and Exchanges Information by Country:</h2>
+        <button class="collapsible">United States</button>
+        <div class="content">
+            <p>Not the perfect fit? Not to worry, we accept returns and exchanges on all unworn, regular priced items within 30 days. Exchanges are on us, as many times you need to get the fit just right! Returns are charged a $15 Green Return Fee. This covers the cost of shipping and carbon offsetting the returned order.</p>
+            <p>*<u> All items on sale are eligible for exchanges only, or return for store credit.</u></p>
+            <p>** Items marked as final sale at time of purchase are ineligible for return or exchange. If you have any other questions, contact us at support@thesusoutdoors.com.</p>
+            <p>*** Gift with confidence. We have extended our returns and exchanges window to 60 days over the holidays.</p>
+            <p>To get your return or exchange started, please visit our <u>Returns Portal here.</u></p>
+        </div>
+        <button class="collapsible">Canada</button>
+        <div class="content">
+            <p>Not the perfect fit? Not to worry, we accept returns and exchanges on all unworn, regular priced items within 30 days. Exchanges are on us, as many times you need to get the fit just right! Returns are charged a $15 Green Return Fee. This covers the cost of shipping and carbon offsetting the returned order.</p>
+            <p>*<u> All items on sale are eligible for return for store credit only</u></p>
+            <p>** Items marked as final sale at time of purchase are ineligible for return or exchange. If you have any other questions, contact us at support@thesusoutdoors.com.</p>
+            <p>To get your return or exchange started, please visit our <u>Returns Portal here.</u></p>
+        </div>
+        <button class="collapsible">Other Countries</button>
+        <div class="content">
+            <p>For orders shipped outside of the countries outlined above, they are considered FINAL SALE, and they are not eligible for return or exchange.</p>
+        </div>
+        <button class="collapsible">Do you offer price adjustments?</button>
+        <div class="content">
+            <p>Unfortunately, out of consideration for our community that waits for the rare sale that happens, we do not offer any price adjustments.</p>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

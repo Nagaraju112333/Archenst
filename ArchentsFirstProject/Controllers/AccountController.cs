@@ -16,7 +16,7 @@ namespace ArchentsFirstProject.Controllers
     {
        
         // GET: Account
-        ArchentsEntities5 db = new ArchentsEntities5();
+        ArchentsEntities7 db = new ArchentsEntities7();
         public ActionResult Index()
         {
             return View();
@@ -54,9 +54,9 @@ namespace ArchentsFirstProject.Controllers
                 user.IsEmailVerified = false;
               
                 #region Save to Database
-                using (ArchentsEntities5 dc = new ArchentsEntities5())
+                using (ArchentsEntities7 dc = new ArchentsEntities7())
                 {
-                    user.RoleType = 2;
+                    user.RoleType=2;
                     dc.Registers.Add(user);
                     dc.SaveChanges();
                     //Send Email to User
@@ -79,7 +79,7 @@ namespace ArchentsFirstProject.Controllers
         [NonAction]
         public bool IsEmailExist(string emailID)
         {
-            using (ArchentsEntities5 dc = new ArchentsEntities5())
+            using (ArchentsEntities7 dc = new ArchentsEntities7())
             {
                 var v = dc.Registers.Where(a => a.Email == emailID).FirstOrDefault();
                 return v != null;
@@ -175,7 +175,7 @@ namespace ArchentsFirstProject.Controllers
             //Send Email 
             string message = "";
             bool status = false;
-            using (ArchentsEntities5 dc = new ArchentsEntities5())
+            using (ArchentsEntities7 dc = new ArchentsEntities7())
             {
                 var account = dc.Registers.Where(a => a.Email == EmailID).FirstOrDefault();
                 if (account != null)
@@ -209,7 +209,7 @@ namespace ArchentsFirstProject.Controllers
                 return HttpNotFound();
             }
 
-            using (ArchentsEntities5 dc = new ArchentsEntities5())
+            using (ArchentsEntities7 dc = new ArchentsEntities7())
             {
                 var user = dc.Registers.Where(a => a.ResetpasswordCode == id).FirstOrDefault();
                 if (user != null)
@@ -231,7 +231,7 @@ namespace ArchentsFirstProject.Controllers
             var message = "";
             if (ModelState.IsValid)
             {
-                using (ArchentsEntities5 dc = new ArchentsEntities5())
+                using (ArchentsEntities7 dc = new ArchentsEntities7())
                 {
                     var user = dc.Registers.Where(a => a.ResetpasswordCode == model.ResetCode).FirstOrDefault();
                     if (user != null)
@@ -256,7 +256,7 @@ namespace ArchentsFirstProject.Controllers
         public ActionResult VerifyAccount(string id)
         {
             bool Status = false;
-            using (ArchentsEntities5 db = new ArchentsEntities5())
+            using (ArchentsEntities7 db = new ArchentsEntities7())
             {
                 db.Configuration.ValidateOnSaveEnabled = false;
                 var a = db.Registers.FirstOrDefault(c => c.ActivationCode == new Guid(id));
@@ -282,11 +282,13 @@ namespace ArchentsFirstProject.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserLogin login, string ReturnUrl = "")
-            {
+                {
+
             string message = "";
-            using (ArchentsEntities5 dc = new ArchentsEntities5())
+            using (ArchentsEntities7 dc = new ArchentsEntities7())
             {
                 var v = dc.Registers.Where(a => a.Email == login.EmailID).FirstOrDefault();
+                //var result1 = db.Registers.Where(x => x.Email == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault();
                 if (v != null)
                 {
                     if (v.RoleType == 2)
@@ -311,6 +313,10 @@ namespace ArchentsFirstProject.Controllers
                             }
                             else
                             {
+                               /* if (result1 != null)
+                                {
+                                  var data = db.ShopingCartModels.Where(x => x.UserId == result1.RegisterId).ToList();
+                                }*/
                                 return RedirectToAction("Home", "Home");
                             }
                         }

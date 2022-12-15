@@ -1,0 +1,358 @@
+﻿
+@model ArchentsFirstProject.Models.Review
+@{
+    ViewBag.Title = "WeeknedBoots";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html onload="parent.scrollTo(0,0);">
+<head>
+  @* <script src="~/Scripts/Product/Cart.js"></script>*@
+ 
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   <link rel="stylesheet" href="~/CSS/WeekendBoots.css" />
+    @* <script type="text/javascript">
+            $(document).ready(function () {
+                function Addtocart(item) {
+                    var itemId = $(item).attr("itemid");
+                    alert(itemId);  
+                }
+            })
+        </script>*@
+</head>
+<body>
+    <div class="px-1">
+        @{ var c = @ViewBag.data;}
+        <div>
+            <div id="homeAndCreateLink" style=" background-color:#EFEFEF;">
+                @Html.ActionLink("Home/", "Home", "Home", new { style = "text-decoration:none; color:#686363" })
+                @Html.ActionLink("The Weekend Boot is back", "Home", "Home", new { style = "text-decoration:none; color:#686363" })
+            </div>
+        </div>
+        <div class="Main">
+            <div class="LeftBoot">
+                <div>
+                    <img id="Mainimg" class="img-fluid w-75  ml-5 mt-2" src="~/Content/WeekendBootimages/@c.Image1" height:500; alt="logo" />
+                    <div class="small-image-group">
+                        <div class="small-image-col ml-5 mt-2">
+                            <img id='menuImg111' width="50%" class="small-image" src="~/Content/WeekendBootimages/@c.Image2" alt="logo" />
+                            <img id='menuImg111' width="50%" class="small-image " src="~/Content/WeekendBootimages/@c.Image3" alt="logo" />
+                            <img id='menuImg111' width="50%" class="small-image " src="~/Content/WeekendBootimages/@c.Image4" alt="logo" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="RightBoot">
+                <h3>@c.Product_Name</h3>
+                <h3 style="color:black;">Rs. @c.Price</h3>
+
+                <p>@c.product_Description</p>
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>12 reviews</p>
+                </div>
+                <div>
+                    Size <h2 id="size1" for="s-size"></h2>
+
+                </div>
+
+                <div class="Sizes">
+                    @foreach (var a in ViewBag.size)
+                    {
+                        <input type="radio" name="size" hidden value="@a.size1" id="s-size" />
+                        <label for="s-size" class="size-radio-btn"  onclick="myFunction(@a.size1)">@a.size1</label>
+                    }
+                     @* <input type="radio" name="size" value="37" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">37</label>
+                        <input type="radio" name="size" value="38" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">38</label>
+                        <input type="radio" name="size" value="40" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">40</label>
+                        <input type="radio" name="size" value="41" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">42</label>
+                        <input type="radio" name="size" value="43" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">43</label>
+                        <input type="radio" name="size" value="44" hidden id="m-size" />
+                        <label for="m-size" class="size-radio-btn">44</label>*@
+                </div>
+                <div style="display:flex; margin-top:30px;">
+                    <div class="wrapper">
+                        <span class="minus">-</span>
+                        <span class="num">01</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <a href="/Products/ProductPost?itemid=@c.Product_Id" class="form-control">AddToCart</a>
+@*                   <input type="submit" value="AddoCart" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
+*@                </div>
+                <div class="" style="margin-top:20px">
+                    <input type="submit" value="Buy with Shop Pay" class="form-control" style=" background: #5A31F4; color:#123026" />
+                </div>
+                <div class="payment">
+                    <a href="#" style="color:black;" id="Morepaymentoptions">More Payment Options</a>
+
+                </div>
+                <div>
+                </div>
+                <div>
+                    <p>Core Features</p>
+                </div>
+                <div>
+                    <p>Free Shipping and Exchanges in the USA</p>
+                </div>
+                <div>
+                    <p>Sizing</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="mx-3">
+            <p style=" margin-top:50px; font-size:3em;">Reviews for the Weekend Boot</p>
+        </div>
+        <div style="display:flex;">
+            <div class=" mx-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <div>
+                (<a href="">14 Total reviews</a>)
+            </div>
+        </div>
+        <div class="card mx-3">
+            <div class="" style="margin-left:15px;">
+                <div>
+                    <h3>Customer Reviews</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+
+                </div>
+                <div>
+                    <p style="float:left">Based on 14 reviews</p>
+                    <a href="#" style="float:right;" id="WriteAreview" scrolling="no">Write A review</a>
+
+                </div>
+                <div class="Reviews" id="reviewForm">
+                    <form method="POST" action="~/Products/Review">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="Name" name="Name" />
+                        <label>Email</label>
+                        <input type="text" class=" form-control" name="Email" id="Email" />
+                        <label>Review Tittle</label>
+                        <input type="text" class="form-control" name="Review_Tittle" id="Review_Tittle" />
+                        <label>Body of Review (1500)</label>
+                        <textarea class="form-control" rows="4" cols="50" placeholder="Write Your Comments here" id="Body" name="Body"></textarea>
+                        <input type="submit" />
+                    </form>
+                    @* @Html.ActionLink("Submit Review", "Review", "Products", "", new { @class = "btn btn-primary" })*@
+                </div>
+                <br />
+                <hr />
+
+            </div>
+            <div style="">
+                <div style="margin-left:15px" ;>
+                    <h3>Love these boots!</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <div class="reviewsDetaisl">
+                        <p style="float:left">Based on 14 reviews</p>
+                        <p>Recently bought these boots and they are wonderful. I have worn them several times hiking and there was no breaking in period. They were comfortable from the start. </p>
+                        <p>They are lightweight and beautifully made. The boots are very easy to take on and off. I really like how stylish they are as well. So cute! </p>
+                        <a href="" style="float:right;">Report as Inappropriate</a>
+                    </div>
+                </div>
+
+                <br />
+                <hr />
+
+            </div>
+            <div style="">
+                <div style="margin-left:15px;">
+                    <h3>Loved them!</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <div>
+                        <p style="float:left">Beautiful boots that include a very comfortable insole! Thank you so much!!</p>
+                        <a href="" style="float:right;">Report as Inappropriate</a>
+                    </div>
+                </div>
+
+                <br />
+                <hr />
+
+            </div>
+            <div style="">
+                <div style="margin-left:15px;">
+                    <h3>
+                        The Do-It-All Boot is HERE
+                    </h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <div>
+                        <p style="float:left">BThese were my first AW boots and they did not disappoint! I wanted a boot for casual hiking, muddy trail walks, dog park, medium-level snow days etc. This is that boot. I love the ankle support and how comfy the insoles are. Perfect to layer with thick socks and still cute with a dress and not just outdoor/athletic gear. I am normally a 9.5-10 with wide feet so I chatted with their customer service team about the best fit and ended up going with a US12 which is either a 42 or 43 in EU sizing. I feel very secure in them and they are very easy to wash/clean especially after a muddy day. An added bonus is that they are vegan and include recycled materials. Purchased Nov 2020 and still going strong. Definitely a staple boot for Pacific Northwest adventures while still looking cute.</p>
+                        <a href="" style="float:right;">Report as Inappropriate</a>
+                    </div>
+                </div>
+
+                <br />
+
+
+            </div>
+        </div>
+        <div>
+            <p style="font-size:3em;">As Seen On You</p>
+        </div>
+        <div class="row">
+            @*  <div hidden="hidden">
+                <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image1" alt="logo" />*@
+
+            <div style="display:flex; justify-content:space-between;" class=" imagess">
+                <div>
+                    <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
+                </div>
+                <div>
+                    <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
+                </div>
+                <div>
+                    <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
+                </div>
+                <div>
+                    <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
+                </div>
+
+                @*<div class="col-12 col-lg-4 col-md-6 ">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image5" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image6" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 ">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image7" alt="logo" />
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 ">
+            <img id='menuImg111' src="~/Content/WeekendBootimages/@c.Image8" alt="logo" />
+        </div>*@
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        function myFunction(item) {
+            document.getElementById("size1").innerHTML = "";
+           
+                const node = document.createElement("s-size");
+
+              
+                const textnode = document.createTextNode(item);
+
+                
+                node.appendChild(textnode);
+            document.getElementById("size1").appendChild(node);
+            }
+            //document.getElementById("size").innerHTML=item;
+        
+    </script>
+    <script type="text/javascript">
+        const SizeBtn = document.querySelectorAll('.size-radio-btn');
+        let checkBtn = 0;
+        SizeBtn.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                SizeBtn[checkBtn].classList.remove('check');
+                item.classList.add('check');
+                item.classList.add('size');
+                checkBtn = i;
+            })
+        })
+
+    </script>
+
+    var puls = document.querySelector(".plus");
+            var minus = document.querySelector('.minus');
+            var num = document.querySelector('.num');
+            let a = 1;
+            puls.addEventListener("click", () => {
+                a++;
+                a = (a < 10) ? "0" + a : a;
+                num.innerHTML = a;
+                console.log(a);
+            })
+            minus.addEventListener("click", () => {
+                if (a > 1) {
+                    a--;
+                    a = (a < 10) ? "0" + a : a;
+                    num.innerHTML = a;
+
+                }
+            })
+            var mainimage = document.getElementById("Mainimg");
+            var smallimg = document.getElementsByClassName("small-image");
+            smallimg[0].onclick = function () {
+                mainimage.src = smallimg[0].src;
+            }
+            smallimg[1].onclick = function () {
+                mainimage.src = smallimg[1].src;
+            }
+            smallimg[2].onclick = function () {
+                mainimage.src = smallimg[2].src;
+            }
+            smallimg[3].onclick = function () {
+                mainimage.src = smallimg[3].src;
+            }
+        </script>
+        <script type="text/javascript">
+            $("#WriteAreview").click(function (e) {
+
+                 e.preventDefault();
+                $('#reviewForm').toggle();
+            })
+        </script>
+        <script>
+            $(document).ready(function () {
+
+                $(this).scrollTop(0);
+
+                $('#reviewForm').hide()
+
+            });
+        </script>
+    
+</body>
+</html>

@@ -9,7 +9,7 @@ namespace ArchentsFirstProject.Models
 {
     public class MyrolesProvider : RoleProvider
     {
-       private ArchentsEntities5 db=new ArchentsEntities5();
+       private ArchentsEntities7 db=new ArchentsEntities7();
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
@@ -48,6 +48,7 @@ namespace ArchentsFirstProject.Models
             {
                 string role = obj.RoleType.ToString();
                 string[] roleAry = { role };
+             
                 return roleAry;
             }
             else

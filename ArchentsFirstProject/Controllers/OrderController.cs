@@ -10,7 +10,7 @@ namespace ArchentsFirstProject.Controllers
     public class OrderController : Controller
     {
         // GET: Order
-        ArchentsEntities5 db=new ArchentsEntities5();
+        ArchentsEntities7 db=new ArchentsEntities7();
         public ActionResult Index()
         {
             return View();

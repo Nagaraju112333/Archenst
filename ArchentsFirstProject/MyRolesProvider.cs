@@ -9,7 +9,7 @@ namespace ArchentsFirstProject
 {
     public class MyRolesProvider : RoleProvider
     {
-        private ArchentsEntities5 db = new ArchentsEntities5();
+        private ArchentsEntities7 db = new ArchentsEntities7();
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)

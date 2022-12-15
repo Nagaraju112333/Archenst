@@ -17,7 +17,7 @@ namespace ArchentsFirstProject.Controllers
             return View();
         }
       
-        ArchentsEntities5 db = new ArchentsEntities5();
+        ArchentsEntities7 db = new ArchentsEntities7();
         [HttpGet]
         public ActionResult WeekendBootMainPage()
         {
