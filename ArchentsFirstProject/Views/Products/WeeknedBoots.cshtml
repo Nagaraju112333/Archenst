@@ -102,10 +102,10 @@
             <span class="num">01</span>
             <span class="plus">+</span>
         </div>*@
-                    <form action="/Products/ProductPost" method="post">
+                    <form action="/Products/ProductPost" method="post" style="width:100%">
                         <input type="hidden" name="SizeOfProducts" value="" id="inputsize" />
                         <input type="hidden"  name="ItemId"  value="@c.Product_Id"/>
-                        <input type="submit" class="form-control" value="AddToCart" style=" border-radius:20px; background:#123026;color:#FFFFFF;text-align:center;">
+                        <input type="submit" class="form-control w-100" value="AddToCart" style=" border-radius:20px; background:#123026;color:#FFFFFF;text-align:center;">
                     </form>
                     @*                   <input type="submit" value="AddoCart" id="onclick" class="form-control" style="margin-left:15px; border-radius:20px; background:#123026;color:#FFFFFF" itemid="@c.Product_Id" onclick="Addtocart(this)" />
                     *@
@@ -277,6 +277,22 @@
             </div>
         </div>
     </div>
+    <script>
+        var mainimage = document.getElementById("Mainimg");
+        var smallimg = document.getElementsByClassName("small-image");
+        smallimg[0].onclick = function () {
+            mainimage.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            mainimage.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            mainimage.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            mainimage.src = smallimg[3].src;
+        }
+    </script>
     <script>
         var result;
         function myFunction(item) {
